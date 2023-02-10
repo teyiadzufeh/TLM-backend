@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "mongoose": "^6.9.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "winston": "^3.8.2"
+  },
+  "name": "teyilovesmondayz",
+  "version": "1.0.0",
+  "description": "Teyilovesmondays blog",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Teyi Adzufeh",
+  "license": "ISC"
+}
