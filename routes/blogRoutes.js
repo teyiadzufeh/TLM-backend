@@ -36,6 +36,7 @@ app.use((req, res, done) => {
 app.get('/ping', blogController.ping);
 app.post('/post/create', blogController.createPost);
 app.get('/post/:id', blogController.getPost);
+app.get('/posts/all', blogController.getAllPosts);
 app.get('/posts/latest', blogController.getLatestPosts);
 app.get('/posts/featured', blogController.getFeaturedPosts);
 app.get('/categories', blogController.getCategories);

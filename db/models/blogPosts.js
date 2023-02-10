@@ -18,7 +18,7 @@ const blogPostSchema = new mongoose.Schema({
         required: 'This field is required.'
     },
     category: {
-        type: mongoose.Schema.Types.String,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Category",
         required: 'This field is required'
     },

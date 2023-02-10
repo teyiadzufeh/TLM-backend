@@ -51,6 +51,20 @@ exports.getPost = async(req,res,next) => {
 }
 
 /**
+ * GET posts/all
+ * Fetch all details of all the posts
+ */
+exports.getAllPosts = async(req, res, next) => {
+    try {
+        let {posts} = await PostService.getAllPosts();
+        JsonResponse(res, 200, MSG_TYPES.POSTS_FOUND, posts);
+        return;
+    } catch (error) {
+        console.log(error);
+        next(error)        
+    }
+}
+/**
  * GET posts/latest
  * Fetch all details of the latest posts
  */

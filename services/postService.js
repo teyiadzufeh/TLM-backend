@@ -72,6 +72,28 @@ class PostService {
             resolve({post})
         })
     }
+    //GET ALL POSTS
+    getAllPosts() {
+        return new Promise(async(resolve, reject)=>{
+            // const post = await Post.findById(id).populate('category', '-_id');
+            try {
+                const posts = await Post.find().populate('category', 'name -_id');
+                if (!posts){
+                    reject({code: 400, message: MSG_TYPES.NOT_FOUND});
+                    return false;
+                }
+    
+    
+                resolve({posts})
+            } catch (error) {
+                console.log(error)
+                reject({ code: 500, message: MSG_TYPES.SERVER_ERROR })
+            }
+            
+
+            
+        })
+    }
 
     //GET LATEST POSTS
     getLatestPosts() {
