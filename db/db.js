@@ -12,3 +12,4 @@ db.once('open', function(){
 require('./models/category');
 require('./models/blogPosts');
 require('./models/comment');
+require('./models/subscriber');

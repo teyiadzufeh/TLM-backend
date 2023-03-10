@@ -3,8 +3,12 @@ const res = require("express/lib/response");
 require('../db/db');
 const { JsonResponse } = require("../lib/apiResponse");
 const { MSG_TYPES } = require("../constants/types");
+const Category = require('../db/models/category');
+const Post = require('../db/models/blogPosts');
 const PostService = require('../services/postService');
 const CategoryService = require('../services/categoryService');
+const CommentService = require('../services/commentService');
+const SubscribeService = require('../services/subscribeService');
 
 
 /**
@@ -29,6 +33,8 @@ exports.ping = async(req,res,next) => {
 exports.createPost = async(req,res,next) => {
     try {
         let {newPost} = await PostService.createPost(req.body);
+        let category = await Category.updateOne({_id: newPost.category},
+            {$addToSet: {posts: newPost._id}});
         return JsonResponse(res, 200, MSG_TYPES.POST_CREATED, newPost);
     } catch (error) {
         console.log(error);
@@ -119,5 +125,94 @@ exports.getPostsByCategories = async (req, res, next) => {
     } catch (error) {
         console.log(error);
         next(error)        
+    }
+}
+/**
+ * POST /post/submit-comment
+ * Submit a comment
+ */
+exports.submitComment = async (req, res, next) => {
+    try {
+        let {insertedComment} = await CommentService.submitComment(req.body);
+        JsonResponse(res, 200, MSG_TYPES.SUBMITTED_SUCCESS, insertedComment);
+        return;
+    } catch (error) {
+        console.log(error);
+        next(error)
+    }
+}
+
+/**
+ * GET /post/comments/:postId
+ * Get comments on a post
+ */
+exports.getComments = async (req, res, next) => {
+    try {
+        let {comments} = await CommentService.getComments(req.params.postId);
+        JsonResponse(res, 200, MSG_TYPES.FETCHED, comments);
+        return;
+    } catch (error) {
+        console.log(error);
+        next(error)
+    }
+}
+
+/**
+ * GET /comments/:id
+ * Get details of a comment
+ */
+exports.getAComment = async (req, res, next) => {
+    try {
+        let {comment} = await CommentService.getComment(req.params.id);
+        JsonResponse(res, 200, MSG_TYPES.FETCHED, comment);
+        return;
+    } catch (error) {
+        console.log(error);
+        next(error)
+    }
+}
+
+/**
+ * PUT /comment/reply/:id
+ * Reply a comment
+ */
+exports.replyComment = async (req, res, next) => {
+    try {
+        let {updatedComment} = await CommentService.replyComment(req.params.id, req.body);
+        JsonResponse(res, 200, 'Reply sent!', updatedComment);
+        return;
+    } catch (error) {
+        console.log(error);
+        next(error) 
+    }
+}
+
+/**
+ * POST /submit-details
+ * Send a mail to a subscriber
+ */
+exports.sendSubscribeMail = async (req, res, next) => {
+    try {
+        let {subscriber}= await SubscribeService.subscribe(req.body);
+        JsonResponse(res,200,MSG_TYPES.SUBSCRIBE_MAIL_SENT, subscriber);
+        return;
+    } catch (error) {
+        console.log(error);
+        next(error) 
+    }
+}
+
+/**
+ * PUT /subscriber/unsubscribe
+ * Subscriber unsubscribing
+ */
+exports.unsubscribe = async (req, res, next) => {
+    try {
+        let {unsubscriber}= await SubscribeService.unsubscribe(req.body);
+        JsonResponse(res, 200, 'Unsubscribed', unsubscriber);
+        return;
+    } catch (error) {
+        console.log(error);
+        next(error) 
     }
 }

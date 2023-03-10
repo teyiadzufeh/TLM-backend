@@ -11,7 +11,7 @@ const MSG_TYPES = Object.freeze({
 	POSTS_FOUND: 'Posts fetched successfully',
 	AWAIT_ADMIN:
 		'Account successfully verified. Awaiting administrator verification.',
-	ACCOUNT_EXIST: 'Account already exist.',
+	ACCOUNT_EXIST: 'Account already exists.',
 	ACCOUNT_INVALID: 'Invalid email or password',
 	SUSPENDED: 'Account is suspended!',
 	INACTIVE: 'Account is inactive!',
@@ -32,13 +32,9 @@ const MSG_TYPES = Object.freeze({
 		"We currently don't have support for this location. Please contact our support for assistance",
 	ACCOUNT_DELETED: 'Account no longer exists!',
 	INVALID_PASSWORD: 'Invalid Password',
-	COMPANY_ACCEPT:
-		"You've successfully accepted this Order. Please Asign a rider to this order immedaitely.",
-	VEHICLE_NOT_SUPPORTED:
-		"You currently don't have support for this vehicle Type so you can't accept this order.",
-	RIDER_ASSIGN: 'Order sent to riders.',
-	RIDER_ACCEPTED: "You've successfully accepted this order",
-	RIDER_REJECTED: "You've successfully rejected this order",
+	SUBSCRIBE_MAIL_SENT: 'Subscription successful! Pls check your mail!',
+	SUBSCRIBER_EXISTS: 'Already subscribed!',
+	SUBMITTED_SUCCESS: 'Submitted successfully',
 	PROCEED_TO_PICKUP: 'Proceeding to pickup location',
 	PICKED_UP: 'Item successfully picked up.',
 	ARRIVED_AT_PICKUP: 'Arrival at pickup location confirmed',

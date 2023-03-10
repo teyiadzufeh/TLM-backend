@@ -41,6 +41,12 @@ app.get('/posts/latest', blogController.getLatestPosts);
 app.get('/posts/featured', blogController.getFeaturedPosts);
 app.get('/categories', blogController.getCategories);
 app.get('/posts/:category', blogController.getPostsByCategories);
+app.post('/post/submit-comment', blogController.submitComment);
+app.get('/comments/:postId', blogController.getComments);
+app.get('/comment/:id', blogController.getAComment);
+app.put('/comment/:id/reply', blogController.replyComment);
+app.post('/subscriber/submit-details', blogController.sendSubscribeMail);
+app.put('/subscriber/unsubscribe', blogController.unsubscribe);
 
 
 

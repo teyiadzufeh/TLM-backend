@@ -12,9 +12,10 @@ class categoryService {
     }
 
     //findPostsbycategory
-    getPostsbyCategory(category) {
+    getPostsbyCategory(id) {
         return new Promise (async (resolve, reject) => {
-            let gory = await Category.findOne({"name": category});
+            // let gory = await Category.findOne({"name": category});
+            let gory = await Category.findById(id);
             if (!gory) {
                 reject({code: 400, message: MSG_TYPES.CATEGORY_NOT_FOUND});
                 return false;
