@@ -17,6 +17,7 @@ const MSG_TYPES = Object.freeze({
 	INACTIVE: 'Account is inactive!',
 	DISABLED: 'Account is disabled!',
 	NOT_FOUND: 'Not Found',
+	POST_NOT_FOUND: 'Post Not Found',
 	CATEGORY_NOT_FOUND: 'Category Not Found, Baba',
 	RESET_MAIL_SENT: 'Reset Mail Sent',
 	PASSWORD_RESET: 'Password Successfully Reset',

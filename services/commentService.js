@@ -7,6 +7,11 @@ class CommentService {
     submitComment(body){
         return new Promise(async(resolve,reject) => {
             let {name, email, comment, post_id} = body;
+            let post = await Post.findById(post_id);
+            if(!post){
+                reject({code:400, message:MSG_TYPES.POST_NOT_FOUND})
+                return false;
+            }
             try {
                 const insertedComment = await Comment.insertMany({
                     name,
@@ -14,6 +19,9 @@ class CommentService {
                     comment,
                     post: post_id
                 });
+
+                post.comments.push(insertedComment[0]._id);
+                await Post.findByIdAndUpdate(post_id, {comments: post.comments});
 
                 resolve({insertedComment})
             } catch (error) {
