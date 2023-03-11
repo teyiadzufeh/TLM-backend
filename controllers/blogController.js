@@ -9,6 +9,7 @@ const PostService = require('../services/postService');
 const CategoryService = require('../services/categoryService');
 const CommentService = require('../services/commentService');
 const SubscribeService = require('../services/subscribeService');
+const ContactService = require('../services/contactService');
 
 
 /**
@@ -44,11 +45,25 @@ exports.createPost = async(req,res,next) => {
 
 /**
  * GET post/:id
- * Fetch all details of a particular post using its id
+ * Fetch all details of a particular post using its postnum
  */
 exports.getPost = async(req,res,next) => {
     try {
         let {post} = await PostService.getPost(req.params.id);
+        return JsonResponse(res, 200, MSG_TYPES.FETCHED, post);
+    } catch (error) {
+        console.log(error)
+        next(error)
+    }
+}
+
+/**
+ * GET post-by-id/:id
+ * Fetch all details of a particular post using its id
+ */
+exports.getPostbyId = async(req,res,next) => {
+    try {
+        let {post} = await PostService.getPostbyId(req.params.id);
         return JsonResponse(res, 200, MSG_TYPES.FETCHED, post);
     } catch (error) {
         console.log(error)
@@ -210,6 +225,21 @@ exports.unsubscribe = async (req, res, next) => {
     try {
         let {unsubscriber}= await SubscribeService.unsubscribe(req.body);
         JsonResponse(res, 200, 'Unsubscribed', unsubscriber);
+        return;
+    } catch (error) {
+        console.log(error);
+        next(error) 
+    }
+}
+
+/**
+ * POST /contact/submit
+ * Contact us page message sent
+ */
+exports.contactMessage = async (req, res, next) => {
+    try {
+        let {contactMessage} = await ContactService.submitContactMessage(req.body);
+        JsonResponse(res, 200, MSG_TYPES.SUBMITTED_SUCCESS, contactMessage);
         return;
     } catch (error) {
         console.log(error);

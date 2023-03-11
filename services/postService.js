@@ -57,11 +57,26 @@ class PostService {
 
         })
     }
-    //GET A POST USING THE ID
+    //GET A POST USING THE POSTNUM
     getPost(id) {
         return new Promise(async(resolve, reject)=>{
             // const post = await Post.findById(id).populate('category', '-_id');
             const post = await Post.findOne({"postnum": id}).populate('category', '-_id');
+
+            if (!post){
+                reject({code: 400, message: MSG_TYPES.NOT_FOUND});
+                return false;
+            }
+
+
+            resolve({post})
+        })
+    }
+
+    //GET POST BY ID
+    getPostbyId(id) {
+        return new Promise(async(resolve, reject)=>{
+            const post = await Post.findById(id).populate('comments', '-_id');
 
             if (!post){
                 reject({code: 400, message: MSG_TYPES.NOT_FOUND});
