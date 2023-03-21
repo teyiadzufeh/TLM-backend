@@ -113,7 +113,7 @@ class PostService {
     //GET LATEST POSTS
     getLatestPosts() {
         return new Promise(async(resolve, reject)=>{
-            const latestPosts = await Post.find().sort({_id: -1}).limit(5);
+            const latestPosts = await Post.find().sort({postnum: -1}).limit(5);
             resolve({latestPosts});
         })
     }
