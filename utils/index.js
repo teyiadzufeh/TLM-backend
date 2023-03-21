@@ -102,7 +102,7 @@ const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays'
 
     const mailOption = {
         from: `${senderName} <${senderEmail}>`,
-        to: email.trim(),
+        to: email,
         subject: subject,
         html: html
     }
