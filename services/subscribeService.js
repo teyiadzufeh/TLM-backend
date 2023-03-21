@@ -7,11 +7,11 @@ class SubscribeService {
     subscribe (body) {
         return new Promise (async (resolve, reject) => {
             let {name, email, IG} = body;
-            const subscriberExists = await Subscriber.findOne({email: email, subscribed:true});
-            if (subscriberExists) {
-                reject({ code:400, message: MSG_TYPES.ACCOUNT_EXIST})
-                return false;
-            }
+            // const subscriberExists = await Subscriber.findOne({email: email, subscribed:true});
+            // if (subscriberExists) {
+            //     reject({ code:400, message: MSG_TYPES.ACCOUNT_EXIST})
+            //     return false;
+            // }
             
             try {
                 const subject = 'TeyiLovesMondays Notifications - We\'re now guyz😉';
