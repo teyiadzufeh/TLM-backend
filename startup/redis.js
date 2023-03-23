@@ -1,7 +1,7 @@
 const redis = require("ioredis");
 const { REDIS_CONFIG } = require("../constants/events");
 
-const redisClient = redis.createClient(REDIS_CONFIG);
+const redisClient = redis.createClient(process.env.REDIS_URL);
 
 redisClient.on("error", (error) => {
     console.error("Redis error:", error);
