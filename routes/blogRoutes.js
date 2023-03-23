@@ -9,6 +9,7 @@ const logger = require("../startup/logger");
 const error = require("../middlewares/errors");
 const endpointNotFound = require("../middlewares/404");
 const app = express();
+const { redisClient } = require("../startup/redis");
 
 //cors set-up
 const corsOptions = {

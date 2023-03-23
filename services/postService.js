@@ -1,6 +1,7 @@
 const {MSG_TYPES} = require('../constants/types');
 const Post = require('../db/models/blogPosts');
 const Category = require('../db/models/category');
+const { redisClient } = require("../startup/redis.js");
 
 class PostService {
     createPost(body) {
@@ -60,14 +61,18 @@ class PostService {
     //GET A POST USING THE POSTNUM
     getPost(id) {
         return new Promise(async(resolve, reject)=>{
-            // const post = await Post.findById(id).populate('category', '-_id');
-            const post = await Post.findOne({"postnum": id}).populate('category', '-_id');
-
-            if (!post){
-                reject({code: 400, message: MSG_TYPES.NOT_FOUND});
-                return false;
+            // check if post is stored in redis server
+            let post = JSON.parse(await redisClient.get(`post${id}`));
+            post && console.log("fetching post from redis...");
+        
+            if(!post){
+                post = await Post.findOne({"postnum": id}).populate('category', '-_id');
+                redisClient.set(`post${post.postnum}`,JSON.stringify(post), 'ex', 604800);
+                if (!post){
+                    reject({code: 400, message: MSG_TYPES.NOT_FOUND});
+                    return false;
+                }
             }
-
 
             resolve({post})
         })
@@ -76,13 +81,18 @@ class PostService {
     //GET POST BY ID
     getPostbyId(id) {
         return new Promise(async(resolve, reject)=>{
-            const post = await Post.findById(id).populate('comments', '-_id');
-
-            if (!post){
-                reject({code: 400, message: MSG_TYPES.NOT_FOUND});
-                return false;
+            // check if post is stored in redis server
+            let post = JSON.parse(await redisClient.get(`post${id}`));
+            post && console.log("fetching post from redis...");
+        
+            if(!post){
+                post = await Post.findById(id).populate('comments', '-_id');
+                redisClient.set(`post${id}`,JSON.stringify(post), 'ex', 604800);
+                if (!post){
+                    reject({code: 400, message: MSG_TYPES.NOT_FOUND});
+                    return false;
+                }
             }
-
 
             resolve({post})
         })
