@@ -6,20 +6,23 @@ const { redisClient } = require("../startup/redis.js");
 class PostService {
     createPost(body) {
         return new Promise( async (resolve, reject)=>{
-            let {name, description, email, category, image, other_images, blockquotes, breakblock, secondbb} = body;
+            let {name, description, email, category, image, other_images, blockquotes, breakblock, secondbb, featured, sponsored} = body;
             let gory = await Category.findOne({name: category});
 
-            const blocks = [
-                "No, your eyes are not paining you. No, there\'s no need to check your calendar. No, my phone screen did not break, leading to me not seeing my calendar well. I\'m still okay in my head and I can explain. It will all make sense in like five minutes. Okay? Okay.",
-                "We\'re about to go on a ride so Enter With Your Change Please.",
-                "When you start something sometimes you\'re like \"make I just do am. If I perish I perish\"(special shoutout to Esther, Daniel, Shedz, Mesh, Abedz, and the rest). And most times when we start, we realise it\'s not easy, but it\'s definitely not as hard as we thought. Yeah I know I\'m speaking facts and telling truths. It\'s what I\'ve been doing since Episode 2.",
-                "Whether you\'ve been reading this on your laptop or your GSMs, it\'s been very naiz seeing everybody\'s comments. Except you\'ve not been commenting 🥊 🥊😡. I\'m just kidding, just kidding okay. But try to be commenting please don\'t let me be refreshing my database for nothing 😭. I genuinely enjoy putting out these posts mehn. I honestly think Everybody Should Love Mondays. That\'s why I\'m trying my best small small with these posts.",
-                "So far, I\'ve been eating plantain chips and having an Ember to Remember 🙈. If you\'ve not been having one, take plantain chips and it will be better honestly❤️. \nWhy am I saying all these things? Because I\'m wise. That\'s the simple answer. You\'re also very wise because you\'re reading this at the moment. You\'re so wise mehn.",
-                "I remember when I started writing The Intro for The Talking Stage episode, I knew straight away that I would hear nice news, and I\'ve heard 🙏🏽. That\'s why I put effort into these posts. I might be writing these Independently but everyone\'s support makes me wanna keep running this race 😭🙏🏽. I may not be seeing the different Currencies in this race but your love has been surreal. Now, if I see the currencies I won\'t be angry o🙈👀. ",
-                "A lot of preparation goes into the different Stages of this Talking and I\'m glad it\'s not wasting🙋🏾‍♂️. At this point, I\'ll get straight to it and not waste A Day in Your Life reading this long thing (aww did you say \"it\'s worth it Teyi\".\' Aww thanks). What you\'re about to read is not a Mistake; \nI\'d like to wish you a very Merry Christmas and a Happy New Year! Jesus is the reason for the season! 🥳 ",
-                "This post is the last post for the year.",
-                "This is not a permanent thing😂. I just wanna take some time off, restrategize, rearrange, respect, respawn, Real Madrid, and realise before coming back next year. It\'s been such a great ride so far. Pls if you want to cry, pls do so in the comments below🙏🏽. Any other form of expression of yourself; pls do it using the comments too🙏🏽",
-            ]
+            const blocks = [   
+                `Before we start, Pls note that this is a continuation of Currency Race 1 (Post 13).`,
+                `Normally and as expected, Ms. Dollars won the race. Or so we think.`,
+                `To be honest, we are/were not so much interested in Ms. Dollars’ life. It’s like those youtubers whose lives are always doing well. Today, \"I bought a house\". Tomorrow, \"I bought a car\". The day after tomorrow you bought land. Can’t you praise God? Can’t your tyre burst one day? (I’m just kidding pls 💀 don’t take this seriously).`,
+                `The koko of the matter is that Dollars and Euros finished the race. I cannot categorically tell you their positions because the cameramen in the race were distracted by the mighty Naira and they forgot to follow the people in front. Well, back to the remaining people in the race.`,
+                `As the race was going on, Naira just went missing. I mean everybody was enjoying the stunts of Naira (in last position) but all of a sudden, the people giving racing advice to Naira, told Naira to leave the racetrack and disappear from the public. Why will a full currency, be playing ‘Hard to Get’?😭 `,
+                `The Passive Ovation Sector (POS for short) were the only ones with access to the whereabouts of Naira. Their own forming was the worst😭. And only God can forgive them. No, don't beg me. I dey vex.`,
+                `Accessbank employees then decided to come out for their own performance but everything they tried to do was just Ayo and Teo. Reverse kings. Kings of bounce back. The instigators of plate-washing. No, don't beg me fr. I dey vex again.`,
+                `The performance did not pacify anything. In fact everything they did just made things worse. The announcers in the stadium suggested that if people were feeling tired from sitting, they could transfer to another seat. You can imagine the chaos involved with hundreds of thousands of people trying to make transfers at the same time. Get it?😃`,
+                `Ms. Kobo then tried to interview different people to keep everyone engaged. Content Creating Queen🤭.`,
+                `\"Hello sir can you explain how you feel about all this that is going on? And how is the crowd reacting to this, sir?\" The man searched through his elaborate vocabulary and struggled to find only a few words: \"Many people are angry. Ermm a lot is uhm going on and Wo, Pressure ti wa!😭\"`,
+                `In case you’re still wondering, we did not find Naira o. As per till now we’re still doing transfer o. Apparently, it’s good for the economy but Pressure ti wa (translates to \"Ye ye ye. There is enormous pressure in the atmosphere amongst the able citizens in this blezzed country\"). I really hope the pressure is not really affecting you in this period if you’re in Nigeria (yeah I know I gotta lotta international readers too haha). If it’s affecting you pls text me let me see what I cannot do🙏🏾.`,
+                `Thank you for reading this! I ‘ppreciate you and I’d like you to share and tell your friends and families that Teyi is back loving Mondays o. Pls leave a comment down below and follow on Instagram (@thewritingsthatteyipromised) Tnxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. Subscribe if you haven’t plsss.`,
+                ]
 
             
 
@@ -47,7 +50,9 @@ class PostService {
                     blockquotes, 
                     breakblock, 
                     secondbb, 
-                    postnum
+                    postnum,
+                    featured,
+                    sponsored
                 })
 
                 resolve({newPost})
@@ -124,6 +129,21 @@ class PostService {
     getLatestPosts() {
         return new Promise(async(resolve, reject)=>{
             const latestPosts = await Post.find().sort({postnum: -1}).limit(5);
+            // let latestPosts = await redisClient.lrange('latestPosts', 0, 5);
+            // // console.log(latestPosts)
+            // // let finalLatest = []
+            // if (latestPosts != []) latestPosts && console.log("fetching post from redis...", typeof(latestPosts));
+
+            // if (latestPosts = []){
+            //     latestPosts = [await redisClient.get('post2'), await redisClient.get('post3')];
+            //     for (let index = 0; index < latestPosts.length; index++) {
+            //         // finalLatest.push(JSON.stringify(latestPosts[index]));
+            //         await redisClient.rpush(`latestPosts`,latestPosts[index]);
+            //     }
+            //     await redisClient.expire('latestPosts',300)
+            //     // redisClient.rpush(`latestPosts`,redisClient.get('post2'),redisClient.get('post3'));
+            //     // redisClient.expire('latestPosts',300)
+            // }
             resolve({latestPosts});
         })
     }

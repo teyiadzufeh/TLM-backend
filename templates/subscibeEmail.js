@@ -1,5 +1,5 @@
 
-SubscribeMail  = (name, featured) => {
+SubscribeMail  = (name, featured, latest) => {
 
 return `
 <!DOCTYPE html>
@@ -213,7 +213,7 @@ return `
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:55px;padding-left:45px;padding-right:45px;padding-top:55px;width:100%;">
-<div align="center" class="alignment" style="line-height:10px"><img alt="Cosmetics and clovers floating in the air" src="https://res.cloudinary.com/mailimages/image/upload/v1676330700/tlm/mail/Ep1Pic_fqf8d3.png" style="display: block; height: auto; border: 0; width: 230px; max-width: 100%;" title="Cosmetics and clovers floating in the air" width="230"/></div>
+<div align="center" class="alignment" style="line-height:10px"><img alt="${featured[0].name}" src="${featured[0].image}" style="display: block; height: auto; border: 0; width: 230px; max-width: 100%;" title="${featured[0].name}" width="230"/></div>
 </td>
 </tr>
 </table>
@@ -245,7 +245,7 @@ return `
 <tr>
 <td class="pad" style="padding-left:35px;padding-right:35px;text-align:left;padding-top:20px;padding-bottom:40px;">
 <div align="left" class="alignment">
-<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://teyilovesmondays.onrender.com/blog/62dde64f09e9ec6390f94a98" style="height:43px;width:232px;v-text-anchor:middle;" arcsize="56%" strokeweight="0.75pt" strokecolor="#1D1D1D" fill="false"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#1d1d1d; font-family:Tahoma, sans-serif; font-size:16px"><![endif]--><a href="https://teyilovesmondays.onrender.com/blog/62dde64f09e9ec6390f94a98" style="text-decoration:none;display:inline-block;color:#1d1d1d;background-color:transparent;border-radius:24px;width:auto;border-top:1px solid #1D1D1D;font-weight:undefined;border-right:1px solid #1D1D1D;border-bottom:1px solid #1D1D1D;border-left:1px solid #1D1D1D;padding-top:5px;padding-bottom:5px;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;" target="_blank"><span style="padding-left:40px;padding-right:40px;font-size:16px;display:inline-block;letter-spacing:normal;"><span style="word-break: break-word; line-height: 32px;"><strong>View Featured Post</strong></span></span></a>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://teyilovesmondays.vercel.app/posts/${featured[0].postnum}" style="height:43px;width:232px;v-text-anchor:middle;" arcsize="56%" strokeweight="0.75pt" strokecolor="#1D1D1D" fill="false"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#1d1d1d; font-family:Tahoma, sans-serif; font-size:16px"><![endif]--><a href="https://teyilovesmondays.vercel.app/posts/${featured[0].postnum}" style="text-decoration:none;display:inline-block;color:#1d1d1d;background-color:transparent;border-radius:24px;width:auto;border-top:1px solid #1D1D1D;font-weight:undefined;border-right:1px solid #1D1D1D;border-bottom:1px solid #1D1D1D;border-left:1px solid #1D1D1D;padding-top:5px;padding-bottom:5px;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;" target="_blank"><span style="padding-left:40px;padding-right:40px;font-size:16px;display:inline-block;letter-spacing:normal;"><span style="word-break: break-word; line-height: 32px;"><strong>View Featured Post</strong></span></span></a>
 <!--[if mso]></center></v:textbox></v:roundrect><![endif]-->
 </div>
 </td>
@@ -301,7 +301,7 @@ return `
 <td class="pad" style="padding-left:35px;padding-right:35px;padding-top:20px;">
 <div style="font-family: sans-serif">
 <div class="" style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 21.6px; color: #333333; line-height: 1.8;">
-<p style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 28.8px;"><span style="font-size:16px;">This post is about phones. I think you should check it out too! You'll definitely enjoy it.</span></p>
+<p style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 28.8px;"><span style="font-size:16px;">${featured[1].description}</span></p>
 </div>
 </div>
 </td>
@@ -311,7 +311,7 @@ return `
 <tr>
 <td class="pad" style="padding-left:35px;padding-right:35px;text-align:left;padding-top:20px;padding-bottom:40px;">
 <div align="left" class="alignment">
-<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://teyilovesmondays.onrender.com/blog/62f0258a46484505dda54e5d" style="height:43px;width:232px;v-text-anchor:middle;" arcsize="56%" strokeweight="0.75pt" strokecolor="#1D1D1D" fill="false"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#1d1d1d; font-family:Tahoma, sans-serif; font-size:16px"><![endif]--><a href="https://teyilovesmondays.onrender.com/blog/62f0258a46484505dda54e5d" style="text-decoration:none;display:inline-block;color:#1d1d1d;background-color:transparent;border-radius:24px;width:auto;border-top:1px solid #1D1D1D;font-weight:undefined;border-right:1px solid #1D1D1D;border-bottom:1px solid #1D1D1D;border-left:1px solid #1D1D1D;padding-top:5px;padding-bottom:5px;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;" target="_blank"><span style="padding-left:40px;padding-right:40px;font-size:16px;display:inline-block;letter-spacing:normal;"><span style="word-break: break-word; line-height: 32px;"><strong>View Featured Post</strong></span></span></a>
+<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://teyilovesmondays.vercel.app/posts/${featured[1].postnum}" style="height:43px;width:232px;v-text-anchor:middle;" arcsize="56%" strokeweight="0.75pt" strokecolor="#1D1D1D" fill="false"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#1d1d1d; font-family:Tahoma, sans-serif; font-size:16px"><![endif]--><a href="https://teyilovesmondays.vercel.app/posts/${featured[1].postnum}" style="text-decoration:none;display:inline-block;color:#1d1d1d;background-color:transparent;border-radius:24px;width:auto;border-top:1px solid #1D1D1D;font-weight:undefined;border-right:1px solid #1D1D1D;border-bottom:1px solid #1D1D1D;border-left:1px solid #1D1D1D;padding-top:5px;padding-bottom:5px;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;" target="_blank"><span style="padding-left:40px;padding-right:40px;font-size:16px;display:inline-block;letter-spacing:normal;"><span style="word-break: break-word; line-height: 32px;"><strong>View Featured Post</strong></span></span></a>
 <!--[if mso]></center></v:textbox></v:roundrect><![endif]-->
 </div>
 </td>
@@ -324,7 +324,7 @@ return `
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:50px;padding-left:45px;padding-right:45px;padding-top:50px;width:100%;">
-<div align="center" class="alignment" style="line-height:10px"><img alt="GSMs: Time for a change?" src="https://res.cloudinary.com/mailimages/image/upload/v1676330873/tlm/mail/Post3_spm88r.png" style="display: block; height: auto; border: 0; width: 230px; max-width: 100%;" title="Lipstick and clovers floating in the air" width="230"/></div>
+<div align="center" class="alignment" style="line-height:10px"><img alt="GSMs: Time for a change?" src="${featured[1].image}" style="display: block; height: auto; border: 0; width: 230px; max-width: 100%;" title="${featured[1].name}" width="230"/></div>
 </td>
 </tr>
 </table>
@@ -375,7 +375,7 @@ return `
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:15px;width:100%;">
-<div align="left" class="alignment" style="line-height:10px"><a href="https://teyilovesmondays.onrender.com/blog/637b3c90df788e53aeacbcd6"><img alt="Merry Christmas and a Happy New Year" src="https://res.cloudinary.com/mailimages/image/upload/v1676332009/tlm/mail/Post17ES1_xjmlb6.png" style="display: block; height: auto; border: 0; width: 193px; max-width: 100%;" title="Post 17: Merry Christmas" width="193" /></a></div>
+<div align="left" class="alignment" style="line-height:10px"><a href="https://teyilovesmondays.vercel.app/posts/${latest[0].postnum}"><img alt="${latest[0].name}" src="${latest[0].image}" style="display: block; height: auto; border: 0; width: 193px; max-width: 100%;" title="${latest[0].name}" width="193" /></a></div>
 </td>
 </tr>
 </table>
@@ -384,7 +384,7 @@ return `
 <td class="pad" style="padding-bottom:15px;padding-left:10px;padding-right:10px;padding-top:10px;">
 <div style="font-family: sans-serif">
 <div class="" style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #0c8a4d; line-height: 1.2;">
-<p style="margin: 0; font-size: 14px; mso-line-height-alt: 16.8px;">November, 2022</p>
+<p style="margin: 0; font-size: 14px; mso-line-height-alt: 16.8px;">March, 2023</p>
 </div>
 </div>
 </td>
@@ -395,7 +395,7 @@ return `
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:15px;width:100%;">
-<div align="left" class="alignment" style="line-height:10px"><a href="https://teyilovesmondays.onrender.com/blog/6371d6c698631fc291415e5c"><img alt="POST 16: Mistakes" src="https://res.cloudinary.com/mailimages/image/upload/v1676332006/tlm/mail/Post16Mis_xxfzd4.png" style="display: block; height: auto; border: 0; width: 193px; max-width: 100%;" title="Post 16: Mistakes" width="193" /></a></div>
+<div align="left" class="alignment" style="line-height:10px"><a href="https://teyilovesmondays.vercel.app/posts/${latest[1].postnum}"><img alt="${latest[1].name}" src="${latest[1].image}" style="display: block; height: auto; border: 0; width: 193px; max-width: 100%;" title="${latest[1].name}" width="193" /></a></div>
 </td>
 </tr>
 </table>
@@ -415,7 +415,7 @@ return `
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:15px;width:100%;">
-<div align="left" class="alignment" style="line-height:10px"><a href="https://teyilovesmondays.onrender.com/blog/636888f71b39261d00de7968"><img alt="POST 15: Handyman" src="https://res.cloudinary.com/mailimages/image/upload/v1676332005/tlm/mail/Post15HaMa_uag06u.png" style="display: block; height: auto; border: 0; width: 193px; max-width: 100%;" title="Post 15: Handyman" width="193"/></a></div>
+<div align="left" class="alignment" style="line-height:10px"><a href="https://teyilovesmondays.vercel.app/posts/${latest[2].postnum}"><img alt="${latest[2].name}" src="${latest[2].image}" style="display: block; height: auto; border: 0; width: 193px; max-width: 100%;" title="${latest[2].name}" width="193"/></a></div>
 </td>
 </tr>
 </table>
@@ -474,7 +474,7 @@ return `
 <!--[if mso]><td style="padding-top:5px;padding-right:20px;padding-bottom:5px;padding-left:20px"><![endif]--><a href="sorecblog.wordpress.com" style="mso-hide:false;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;display:inline-block;color:#515151;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:14px;text-decoration:none;letter-spacing:normal;">Read</a>
 <!--[if mso]></td><td><![endif]--><span class="sep" style="font-size:14px;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;color:#515151;">|</span>
 <!--[if mso]></td><![endif]-->
-<!--[if mso]><td style="padding-top:5px;padding-right:20px;padding-bottom:5px;padding-left:20px"><![endif]--><a href="https://teyilovesmondays.onrender.com" style="mso-hide:false;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;display:inline-block;color:#515151;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:14px;text-decoration:none;letter-spacing:normal;">Visit The Website</a>
+<!--[if mso]><td style="padding-top:5px;padding-right:20px;padding-bottom:5px;padding-left:20px"><![endif]--><a href="https://teyilovesmondays.vercel.app" style="mso-hide:false;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;display:inline-block;color:#515151;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:14px;text-decoration:none;letter-spacing:normal;">Visit The Website</a>
 <!--[if mso]></td><td><![endif]--><span class="sep" style="font-size:14px;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;color:#515151;">|</span>
 <!--[if mso]></td><![endif]-->
 <!--[if mso]><td style="padding-top:5px;padding-right:20px;padding-bottom:5px;padding-left:20px"><![endif]--><a href="https://www.instagram.com/thewritingsthatteyipromised" style="mso-hide:false;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;display:inline-block;color:#515151;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:14px;text-decoration:none;letter-spacing:normal;">Check out other writings</a>
@@ -519,7 +519,7 @@ return `
 <td class="pad" style="padding-bottom:5px;padding-left:10px;padding-right:10px;padding-top:20px;">
 <div style="font-family: sans-serif">
 <div class="" style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #888888; line-height: 1.2;">
-<p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 16.8px;"><span style="font-size:12px;">© 2020 Company Name | 123 Main St. City, State, Country 12345</span></p>
+<p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 16.8px;"><span style="font-size:12px;">© 2023 TeyiLovesMondays </span></p>
 </div>
 </div>
 </td>
@@ -530,7 +530,6 @@ return `
 <td class="pad" style="padding-bottom:5px;padding-left:10px;padding-right:10px;padding-top:5px;">
 <div style="font-family: sans-serif">
 <div class="" style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #888888; line-height: 1.2;">
-<p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 16.8px;"><span style="font-size:12px;">If you prefer not to receive marketing emails form this list, <a href="http://www.example.com" rel="noopener" style="text-decoration: underline; color: #888888;" target="_blank">click here to unsubscribe</a>.</span></p>
 </div>
 </div>
 </td>

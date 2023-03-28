@@ -2,6 +2,7 @@ const {MSG_TYPES} = require('../constants/types');
 const { Transporter } = require('../utils');
 const SubscribeMail = require('../templates/subscibeEmail');
 const Subscriber = require('../db/models/subscriber');
+const Post = require('../db/models/blogPosts');
 
 class SubscribeService {
     subscribe (body) {
@@ -19,7 +20,9 @@ class SubscribeService {
                 <p>Name: ${name},</p>
                 <p>Email: ${email},</p>
                 <p>IG: ${IG},</p>`;
-                const html = SubscribeMail(name);
+                const featuredPosts = await Post.find({featured: true}).limit(3);
+                const latestPosts = await Post.find().sort({postnum: -1}).limit(5);
+                const html = SubscribeMail(name, featuredPosts,latestPosts);
 
                 await Transporter(email, subject, html);
                 await Transporter(process.env.email, 'TLM user details', my_output);

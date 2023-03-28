@@ -59,7 +59,17 @@ const blogPostSchema = new mongoose.Schema({
     featured: {
         type: Boolean,
         default: false
-    }
+    },
+    sponsored: [{
+        sponsor: {
+            type: String,
+            required: false
+        },
+        link: {
+            type: String,
+            required: false
+        }
+    }]
 
 });
 
