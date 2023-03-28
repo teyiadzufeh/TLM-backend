@@ -1,6 +1,7 @@
 const {MSG_TYPES} = require('../constants/types');
 const Comment = require('../db/models/comment');
 const Post = require('../db/models/blogPosts');
+const { Transporter } = require('../utils');
 const Category = require('../db/models/category');
 
 class CommentService {
@@ -51,6 +52,17 @@ class CommentService {
                 comment.replies.push(reply);
 
                 const updatedComment = await Comment.findByIdAndUpdate(id, {replies: comment.replies});
+                if (updatedComment){
+                    let commentPost = await Post.findById(comment.post);
+                    const subject = 'TeyiLovesMondays Notifications - Someone replied to your comment!';
+                    const html =`
+                    <p>Hi ${comment.name}!</p>
+                    <p>${name} just replied to your comment on the blog!</p>
+                    <p>Click <a href="https://teyilovesmondays.vercel.app/posts/${commentPost.postnum}">here</a> to check it out!</p>
+                    <p>Alright bye bye👍🏾</p>`;
+
+                    await Transporter(comment.email, subject, html);
+                }
                 resolve({updatedComment})
             } catch (error) {
                 console.log(error)
