@@ -94,6 +94,7 @@ const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays'
         debug: true, //show debug output
         logger: true, // log info
         pool: true,
+        port: 587,
         auth: {
             user: process.env.email, 
             pass: process.env.email_Password
