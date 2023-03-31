@@ -6,6 +6,7 @@ const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const cloudinary = require("cloudinary");
+const {google} = require("googleapis");
 // const DatauriParser = require("datauri/parser");
 // const parser = new DatauriParser();
 
@@ -86,9 +87,43 @@ const GenerateOTP = (num) => {
 //         })
 // }
 
+const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays', senderEmail = process.env.email) => {
+    const oAuth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRET);
+    oAuth2Client.setCredentials({refresh_token: process.env.REFRESH_TOKEN});
+    const accessToken = oAuth2Client.getAccessToken();
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',                 
+        logger: true, // log info
+        auth: {
+            type: 'OAuth2',
+            user: process.env.email, 
+            clientId: process.env.CLIENT_ID,
+            clientSecret: process.env.CLIENT_SECRET,
+            refreshToken: process.env.REFRESH_TOKEN,
+            accessToken: accessToken
+        },
+        // tls: {
+        //     // do not fail on invalid certs
+        //     rejectUnauthorized: false,
+        // }
+    })
+
+    const mailOption = {
+        from: `${senderName} <${senderEmail}>`,
+        to: email,
+        subject: subject,
+        html: html
+    }
+
+    await transporter.sendMail(mailOption)
+        .then(info => logger.info('Email sent -' + info.response))
+        .catch(error => logger.error('Nodemailer Error -' + error))
+
+}
+
 //alternative for sendgrid
 //To be use for testing environment
-const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays', senderEmail = process.env.email) => {
+const TransporterMail = async (email, subject, html, senderName = 'TeyiLovesMondays', senderEmail = process.env.email) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',                 
         logger: true, // log info
