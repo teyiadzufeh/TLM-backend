@@ -90,6 +90,7 @@ const GenerateOTP = (num) => {
 //To be use for testing environment
 const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays', senderEmail = process.env.email) => {
     const transporter = nodemailer.createTransport({
+        secure: 'tls',
         service: 'gmail',
         debug: true, //show debug output
         logger: true, // log info
