@@ -99,10 +99,11 @@ const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays'
             user: process.env.email, 
             pass: process.env.email_Password
         },
-        tls: {
-            // do not fail on invalid certs
-            rejectUnauthorized: false,
-          }
+        requireTLS: true
+        // tls: {
+        //     // do not fail on invalid certs
+        //     rejectUnauthorized: false,
+        //   }
     })
 
     const mailOption = {
