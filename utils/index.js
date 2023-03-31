@@ -102,10 +102,10 @@ const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays'
             refreshToken: process.env.REFRESH_TOKEN,
             accessToken: accessToken
         },
-        // tls: {
-        //     // do not fail on invalid certs
-        //     rejectUnauthorized: false,
-        // }
+        tls: {
+            // do not fail on invalid certs
+            rejectUnauthorized: false,
+        }
     })
 
     const mailOption = {
