@@ -90,11 +90,12 @@ const GenerateOTP = (num) => {
 //To be use for testing environment
 const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays', senderEmail = process.env.email) => {
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: "smtp.gmail.com",
+        secure: true, // use TLS  
         debug: true, //show debug output
         logger: true, // log info
         pool: true,
-        port: 587,
+        port: 465,
         auth: {
             user: process.env.email, 
             pass: process.env.email_Password
