@@ -1,6 +1,8 @@
 const {MSG_TYPES} = require('../constants/types');
 const Comment = require('../db/models/comment');
 const Post = require('../db/models/blogPosts');
+const nodemailer = require('nodemailer');
+const {google} = require('googleapis');
 const { Transporter } = require('../utils');
 const Category = require('../db/models/category');
 
@@ -57,11 +59,45 @@ class CommentService {
                     const subject = 'TeyiLovesMondays Notifications - Someone replied to your comment!';
                     const html =`
                     <p>Hi ${comment.name}!</p>
-                    <p>${name} just replied to your comment on the blog!</p>
+                    <p>${name} replied to your comment on the blog!</p>
                     <p>Click <a href="https://teyilovesmondays.vercel.app/posts/${commentPost.postnum}">here</a> to check it out!</p>
                     <p>Alright bye bye👍🏾</p>`;
 
-                    await Transporter(comment.email, subject, html);
+                    const oAuth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRET);
+                    oAuth2Client.setCredentials({refresh_token: process.env.REFRESH_TOKEN});
+                    const accessToken = oAuth2Client.getAccessToken();
+                    const transporter = nodemailer.createTransport({
+                        service: 'gmail',                 
+                        logger: true, // log info
+                        auth: {
+                            type: 'OAuth2',
+                            user: process.env.email, 
+                            clientId: process.env.CLIENT_ID,
+                            clientSecret: process.env.CLIENT_SECRET,
+                            refreshToken: process.env.REFRESH_TOKEN,
+                            accessToken: accessToken
+                        },
+                        tls: {
+                            // do not fail on invalid certs
+                            rejectUnauthorized: false,
+                        }
+                    })
+
+                    const mailOption = {
+                        from: `Teyilovesmondays <${process.env.email}>`,
+                        to: comment.email,
+                        subject: subject,
+                        html: html
+                    }
+                    
+                    transporter.sendMail(mailOption, function(err,data){
+                        if (err) {
+                            console.log('Error', err);
+                        } else {
+                            console.log('Email Sent');
+                        }
+                    });
+                    // await Transporter(comment.email, subject, html);
                 }
                 resolve({updatedComment})
             } catch (error) {
