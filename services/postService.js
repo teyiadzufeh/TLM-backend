@@ -10,18 +10,23 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [   
-                `Before we start, Pls note that this is a continuation of Currency Race 1 (Post 13).`,
-                `Normally and as expected, Ms. Dollars won the race. Or so we think.`,
-                `To be honest, we are/were not so much interested in Ms. Dollars’ life. It’s like those youtubers whose lives are always doing well. Today, \"I bought a house\". Tomorrow, \"I bought a car\". The day after tomorrow you bought land. Can’t you praise God? Can’t your tyre burst one day? (I’m just kidding pls 💀 don’t take this seriously).`,
-                `The koko of the matter is that Dollars and Euros finished the race. I cannot categorically tell you their positions because the cameramen in the race were distracted by the mighty Naira and they forgot to follow the people in front. Well, back to the remaining people in the race.`,
-                `As the race was going on, Naira just went missing. I mean everybody was enjoying the stunts of Naira (in last position) but all of a sudden, the people giving racing advice to Naira, told Naira to leave the racetrack and disappear from the public. Why will a full currency, be playing ‘Hard to Get’?😭 `,
-                `The Passive Ovation Sector (POS for short) were the only ones with access to the whereabouts of Naira. Their own forming was the worst😭. And only God can forgive them. No, don't beg me. I dey vex.`,
-                `Accessbank employees then decided to come out for their own performance but everything they tried to do was just Ayo and Teo. Reverse kings. Kings of bounce back. The instigators of plate-washing. No, don't beg me fr. I dey vex again.`,
-                `The performance did not pacify anything. In fact everything they did just made things worse. The announcers in the stadium suggested that if people were feeling tired from sitting, they could transfer to another seat. You can imagine the chaos involved with hundreds of thousands of people trying to make transfers at the same time. Get it?😃`,
-                `Ms. Kobo then tried to interview different people to keep everyone engaged. Content Creating Queen🤭.`,
-                `\"Hello sir can you explain how you feel about all this that is going on? And how is the crowd reacting to this, sir?\" The man searched through his elaborate vocabulary and struggled to find only a few words: \"Many people are angry. Ermm a lot is uhm going on and Wo, Pressure ti wa!😭\"`,
-                `In case you’re still wondering, we did not find Naira o. As per till now we’re still doing transfer o. Apparently, it’s good for the economy but Pressure ti wa (translates to \"Ye ye ye. There is enormous pressure in the atmosphere amongst the able citizens in this blezzed country\"). I really hope the pressure is not really affecting you in this period if you’re in Nigeria (yeah I know I gotta lotta international readers too haha). If it’s affecting you pls text me let me see what I cannot do🙏🏾.`,
-                `Thank you for reading this! I ‘ppreciate you and I’d like you to share and tell your friends and families that Teyi is back loving Mondays o. Pls leave a comment down below and follow on Instagram (@thewritingsthatteyipromised) Tnxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. Subscribe if you haven’t plsss.`,
+                `The dictionary meaning of the word bombastic says ‘high-sounding but with little meaning’. However, that’s too much English in my opinion.`,
+
+                `The term bombastic refers to something that is… bombastic. The meaning is in the word. It sounds like something big. `,
+                
+                `Before there was ‘side eye’, there was ‘element’; the perfect word to go with bombastic. It was the pinnacle of insults in primary school. If you had gotten into an argument with someone in primary school, you could be throwing all the words you know, your opponent could be throwing theirs but the one that would totally finish the fight will be this simple, immaculate, superb, fantastic, but equally colossal phrase: `,
+                
+                `“BOMBASTIC ELEMENT”`,
+                
+                `It was always the final KO. It doesn’t matter whether the opponent threw a ‘You m*** all the fishes in the water say “ARE WE SAFEEE?”’ or whatever semi-serious joke😭.`,
+                
+                `Bombastic element would always win the fight!`,
+                
+                `I don’t know what this Tiktok generation uses in their child-spats these days but I'm pretty sure ‘bombastic element’ would still win. I mean, imagine two primary school students arguing and one person says “It’s giving you don’t have sense mumu” 😭😭😭. The way “Bombastic element” will finish that one easily pls😭. It’s not only “giving”. Nonsense 😂. You’re an element my friend.`,
+                
+                `To be honest, looking back now it’s so crazy that whether you were called a bombastic element or whatever child-slur, we would always shake it off and be guys again after like  two days😭🤣. It’s even more crazy that the insults on Lagos roads sound exactly like primary school insults and we think it’s normal 😭. Omo it is well💀`,
+                
+                `For me I think ‘bombastic element’ was the king of all the insults, but what do you think? Pls leave your answer in the comments and share this post with others as well. Thank you !❤️ You’re not a bombastic element since you’ve read this post❤️. See you next week!`,
                 ]
 
             
