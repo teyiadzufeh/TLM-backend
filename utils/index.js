@@ -87,7 +87,7 @@ const GenerateOTP = (num) => {
 //         })
 // }
 
-const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays', senderEmail = process.env.email) => {
+const TransporterMail = async (email, subject, html, senderName = 'TeyiLovesMondays', senderEmail = process.env.email) => {
     const oAuth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRET);
     oAuth2Client.setCredentials({refresh_token: process.env.REFRESH_TOKEN});
     const accessToken = oAuth2Client.getAccessToken();
@@ -123,18 +123,22 @@ const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays'
 
 //alternative for sendgrid
 //To be use for testing environment
-const TransporterMail = async (email, subject, html, senderName = 'TeyiLovesMondays', senderEmail = process.env.email) => {
+const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays', senderEmail = process.env.email) => {
     const transporter = nodemailer.createTransport({
-        service: 'gmail',                 
+        pool: true,
+        host: "smtp.gmail.com",
+        // service: 'gmail',                 
         logger: true, // log info
+        port: 465,
+        secure: true,
         auth: {
             user: process.env.email, 
             pass: process.env.email_Password
         },
-        // tls: {
-        //     // do not fail on invalid certs
-        //     rejectUnauthorized: false,
-        // }
+        tls: {
+            // do not fail on invalid certs
+            rejectUnauthorized: false,
+        }
     })
 
     const mailOption = {

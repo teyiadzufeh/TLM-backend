@@ -10,23 +10,21 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [   
-                `The dictionary meaning of the word bombastic says ‘high-sounding but with little meaning’. However, that’s too much English in my opinion.`,
-
-                `The term bombastic refers to something that is… bombastic. The meaning is in the word. It sounds like something big. `,
-                
-                `Before there was ‘side eye’, there was ‘element’; the perfect word to go with bombastic. It was the pinnacle of insults in primary school. If you had gotten into an argument with someone in primary school, you could be throwing all the words you know, your opponent could be throwing theirs but the one that would totally finish the fight will be this simple, immaculate, superb, fantastic, but equally colossal phrase: `,
-                
-                `“BOMBASTIC ELEMENT”`,
-                
-                `It was always the final KO. It doesn’t matter whether the opponent threw a ‘You m*** all the fishes in the water say “ARE WE SAFEEE?”’ or whatever semi-serious joke😭.`,
-                
-                `Bombastic element would always win the fight!`,
-                
-                `I don’t know what this Tiktok generation uses in their child-spats these days but I'm pretty sure ‘bombastic element’ would still win. I mean, imagine two primary school students arguing and one person says “It’s giving you don’t have sense mumu” 😭😭😭. The way “Bombastic element” will finish that one easily pls😭. It’s not only “giving”. Nonsense 😂. You’re an element my friend.`,
-                
-                `To be honest, looking back now it’s so crazy that whether you were called a bombastic element or whatever child-slur, we would always shake it off and be guys again after like  two days😭🤣. It’s even more crazy that the insults on Lagos roads sound exactly like primary school insults and we think it’s normal 😭. Omo it is well💀`,
-                
-                `For me I think ‘bombastic element’ was the king of all the insults, but what do you think? Pls leave your answer in the comments and share this post with others as well. Thank you !❤️ You’re not a bombastic element since you’ve read this post❤️. See you next week!`,
+                `There are several ways to combine Garri with something else. It's a multipurpose monument. It's "giving" diversity. But if you combine Garri and Chapman, you'd probably cross into a special dimension of sweetness and come up with a lifelong timeless principle like `,
+                `"The 5 Love Languages".`, 
+                `This is a true story. I'm not playing. Google it.`,
+                `It's a principle that is used everyday by people around the world. However, sorry to burst your bubble but while in your talking stage I'd like to tell you that the real love languages are not necessarily what you think you know.`,
+                `The 5 love languages are Words of affirmation, Igbo, Yoruba, Hausa, and Pidgin (under review).`,
+                `A good mastery of these languages will help you in your quest to talk very well on this stage. Yes it is very important to know your prospective partner's love language. `,
+                `Talking to someone in their specific language (or dialect) brings a certain connection that is stronger than anything MTN can offer (trust me I know everything MTN can offer) and the best way to test your mastery is to go to a market and to see if you can price something from 5,000 to 450. `,
+                `You'd have to communicate effectively in the vendor's preferred language. Once you crack that, you're almost ready to go.`,
+                `So, if you're eyeing any babe, pls drop all that English first. Get up. Go and buy something. Price it in her language. Do important prepping. `,
+                `Find something that is worth 5,000 and meet the woman and say \n"Madam, o bu 450 dịka na-agụ, gịnị ka m na-agụ akaị?" (yes, I know I'm a multilingual king 😌🤭).`,
+                `They don't normally give this kind of advice just anyhow, but I'm trying to make it accessible to everybody 🙏🏽. #philanthropist `,
+                `I believe it was Nnamdi Azikiwe who said "If you can price successfully in her language, you can win that babe" during the first elections held in Nigeria.`,
+                `I can assure you that if you follow these things, you will not need to split your assets with anybody and then find out the person does not have assets in their name because there'll be no divorce here 👀👍🏾.`,
+                `Click on the links in the "Sponsored by" section to take your real love language test🙏🏽.`,
+                `Thank you for reading! I know one or two people have found love through these things but all the glory to God not me pls 🙏🏽. You can share this to your friends and tell them to read so that you can have more weddings to attend soon🙏🏽. Please leave a comment as well! `,
                 ]
 
             
