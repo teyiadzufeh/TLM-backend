@@ -1,4 +1,5 @@
 require("./startup/logger");
+const axios = require('axios');
 const express = require('express');
 const { ExplainVerbosity } = require('mongodb');
 
@@ -18,6 +19,23 @@ const reload = async(req,res,next) => {
         return ("OK for reload at ", now.toLocaleString());
 }
 
-setInterval(reload, 1700000)
+setInterval(() => {
+    let config = {
+        method: 'get',
+        maxBodyLength: Infinity,
+        url: 'https://tlm-backend.onrender.com/api/v1/ping',
+        headers: { }
+      };
+      
+      axios.request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+}, 1750000);
+
+// setInterval(reload, 1700000)
 
 app.listen(port, () => console.log(`Listening to port ${port}`));
