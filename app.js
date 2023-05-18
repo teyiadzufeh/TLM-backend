@@ -34,7 +34,7 @@ setInterval(() => {
       .catch((error) => {
         console.log(error);
       });
-}, 1750000);
+}, 850000);
 
 // setInterval(reload, 1700000)
 
