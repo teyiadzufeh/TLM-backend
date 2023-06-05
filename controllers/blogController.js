@@ -1,10 +1,8 @@
 require('dotenv').config();
-const res = require("express/lib/response");
 require('../db/db');
 const { JsonResponse } = require("../lib/apiResponse");
 const { MSG_TYPES } = require("../constants/types");
 const Category = require('../db/models/category');
-const Post = require('../db/models/blogPosts');
 const PostService = require('../services/postService');
 const CategoryService = require('../services/categoryService');
 const CommentService = require('../services/commentService');
