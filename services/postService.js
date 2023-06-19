@@ -10,17 +10,23 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [   
-                `Today’s post is not influenced by recent activities around Nigeria or the world.`,
-                `As a young fresh bro growing up, I never really understood the hype of having pets. If I’m to be totally honest and plain and clear as day with you guys, I’d say I was scared of animals. Till today, we’re not best of friends but at least it’s not that bad anymore.                `, 
-                `However, over time I think I kinda get the gist. Especially as they want to use pet videos to finish us in IG reels. They’re actually not that bad.`, 
-                `I’d say that personally, I mightn’t have pets. No need for that pls. Will you wash plates? If no, then abeg free me. Let me be enjoying you from IG reels. I can’t be adding someone / something to my life that isn’t directly impacting work that I have to do.`, 
-                `Now hold up. Calm down. Don’t get me wrong I’m not saying that pet lovers are somehow or anything. As I’ve already said, IG reels have made me see the pets in a different light. Okay? Okay. However (second however of today); pls I’m not interested.`, 
-                `But I get why a lot of people would get pets. Perhaps to have a “cute” thing to play with or to be your guy. Of course over time you’d get closer to the animal as you spend time with it. So it would almost be like family.`,
-                `Once again, I understand but personally, I won’t. I know many people are not like me on this but if you are, you probably had the same idea that I had about animals when you were growing up. Gather here for a serious group hug. Whether you like it or not we’re the minority. We might need therapy but for now let’s manage the group hug💀.`, 
-                `It’s not the worst thing ever but we need to change our minds because there’s probably some sort of trauma attached to us not liking pets or animals in general. In future, I’m praying that my children don’t get any idea about having a pet 😭 because I might have to adjust. Until then: only 'IG reels love' for pets.`,
-                `If you’re a pet lover, congratulations to you. There are like 7.5billion of you in the world. No I’m not saying you’re not special o. Pls don’t take it like that👍🏾.`,
-                `If you’ve come this far you deserve one internet pet innit. Thanks for reading this today. Kindly share with your friends and families 🙏🏽. I appreciate you innit.`,
-                `Pls leave a comment on what you think about this post and also subscribe if you haven’t. Have a great week!`
+                `Everyday it’s “savings or current?”`,
+                `Nobody is asking “o how is your mental health today sir?” We live in very selfish times mehn. We are now being defined by whether it is savings or current!`,
+                `In life there are three constant things. Billing, and two other things. I don’t know what the other two things are but I’m sure about Billing😭.`,
+                `Let the poor breeve. Don’t suffercate them. You have that responsibility.`, 
+                `Almost everyday in this adulthood there’s a reason to be billed. Like why? What is the problem? Ahn ahn. Again I say let the poor breeve.`, 
+                `Hence I’ve decided to help you guys (and myself too✋🏽😩🤚🏽) with some helpful tips to defeat the effects of billing. Get ready.`, 
+                `First of all, you have to convert Negedivity to a positive drive. Now what this means, is totally up to you. It can mean one thing to one person and another thing to a different person.`, 
+                `Secondly, you have to sleep a lot. Being awake too much = serious billing. Even if I tell you not to go out, do you need to go out before one bank in Nigeria will debit you for Card Maintenance Fees for a card you’ve not used in like seven months? Card is in my hand but it’s you I’m paying the money to, to help me maintain it😂.`,
+                `Someone that is sleeping cannot know that Accessinith Bank has debited them.`, 
+                `Therefore, a serious remedy for billing is to be asleep. If you ask someone that is sleeping about “savings or current”, the person cannot answer you. Hence, cannot be billed🙏🏽👍🏾.`,
+                `Then, of course, you can use a screwdriver to create a pathway to fortune. This is another one that means one thing to one person and another thing to a different person. `,
+                `The fourth and final one is to say “no” consistently. This one needs a bit of explanation because if they ask you whether you want something good, if you say “no” that’s on you 👍🏾. But say no to billing! In life, you can block some unnecessary billings. From yourself, from “friends”, from even some family members💀 but for this one, I don’t have a problem with you spending “unnecessarily” on family members.`,
+                `Avoid making a down payment on roasted corn.`,
+                `I won’t choose what you can or should cut down so you must cut it by yourself 👍🏾.`,
+                `I’d still say that the surest way is sleeping, to be honest. The security of that one is not 99.9% it is 100%. Albert Einstein said “If I dey sleep, then nobody fit bill me” and I felt that. `,
+                `Thank you for reading today’s post. Or I should be thanking myself too because I don’t know where this came from😭. But it has changed my own life😭🙏🏽. So everybody at the count of three let’s say “Thank you Jesus for the inspiration.” 1 2 3?!`,
+                `Pls leave a comment as well so that your billing this week will reduce 🙏🏽. I’m just kidding pls but even though even though. Subscribe if you haven’t too!` 
                 
                 // `———————————————————————-`, 
                 // `———————————————————————-`, 
