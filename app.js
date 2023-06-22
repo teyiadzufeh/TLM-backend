@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 require('dotenv').config();
-const pr = process.env.EMAIL_PASSWORD;
+const pr = process.env.email_Password;
 
 app.use(express.urlencoded({ extended: true }));
 
