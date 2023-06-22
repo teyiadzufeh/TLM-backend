@@ -133,7 +133,7 @@ const Transporter = async (email, subject, html, senderName = 'TeyiLovesMondays'
         secure: true,
         auth: {
             user: process.env.email, 
-            pass: process.env.email_Password
+            pass: process.env.EMAIL_PASSWORD
         },
         tls: {
             // do not fail on invalid certs
