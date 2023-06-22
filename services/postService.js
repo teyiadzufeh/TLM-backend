@@ -10,26 +10,20 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [   
-                `Everyday it’s “savings or current?”`,
-                `Nobody is asking “o how is your mental health today sir?” We live in very selfish times mehn. We are now being defined by whether it is savings or current!`,
-                `In life there are three constant things. Billing, and two other things. I don’t know what the other two things are but I’m sure about Billing😭.`,
-                `Let the poor breeve. Don’t suffercate them. You have that responsibility.`, 
-                `Almost everyday in this adulthood there’s a reason to be billed. Like why? What is the problem? Ahn ahn. Again I say let the poor breeve.`, 
-                `Hence I’ve decided to help you guys (and myself too✋🏽😩🤚🏽) with some helpful tips to defeat the effects of billing. Get ready.`, 
-                `First of all, you have to convert Negedivity to a positive drive. Now what this means, is totally up to you. It can mean one thing to one person and another thing to a different person.`, 
-                `Secondly, you have to sleep a lot. Being awake too much = serious billing. Even if I tell you not to go out, do you need to go out before one bank in Nigeria will debit you for Card Maintenance Fees for a card you’ve not used in like seven months? Card is in my hand but it’s you I’m paying the money to, to help me maintain it😂.`,
-                `Someone that is sleeping cannot know that Accessinith Bank has debited them.`, 
-                `Therefore, a serious remedy for billing is to be asleep. If you ask someone that is sleeping about “savings or current”, the person cannot answer you. Hence, cannot be billed🙏🏽👍🏾.`,
-                `Then, of course, you can use a screwdriver to create a pathway to fortune. This is another one that means one thing to one person and another thing to a different person. `,
-                `The fourth and final one is to say “no” consistently. This one needs a bit of explanation because if they ask you whether you want something good, if you say “no” that’s on you 👍🏾. But say no to billing! In life, you can block some unnecessary billings. From yourself, from “friends”, from even some family members💀 but for this one, I don’t have a problem with you spending “unnecessarily” on family members.`,
-                `Avoid making a down payment on roasted corn.`,
-                `I won’t choose what you can or should cut down so you must cut it by yourself 👍🏾.`,
-                `I’d still say that the surest way is sleeping, to be honest. The security of that one is not 99.9% it is 100%. Albert Einstein said “If I dey sleep, then nobody fit bill me” and I felt that. `,
-                `Thank you for reading today’s post. Or I should be thanking myself too because I don’t know where this came from😭. But it has changed my own life😭🙏🏽. So everybody at the count of three let’s say “Thank you Jesus for the inspiration.” 1 2 3?!`,
-                `Pls leave a comment as well so that your billing this week will reduce 🙏🏽. I’m just kidding pls but even though even though. Subscribe if you haven’t too!` 
-                
-                // `———————————————————————-`, 
-                // `———————————————————————-`, 
+                `We’re live in the serious trenches of Banana Island, in Lagos Nigeria. There has been obvious dissatisfaction amongst the conductors due to the subsidy removal. They have all admitted that their training was rigorous, but it couldn’t have ever prepared them for this tough season. A bit like every person for the first year or so after uni. But I digress.`,
+                `“Make i no talk. Because if I talk. E no go even funny. Personally as I Dey so, I just feel say na wickedness. Okay okay yes we suppose get big holiday later but Ahn ahn. No be who survive till then go do holiday? 😭”`,
+                `That was the voice of Don Carlo, one of the upcoming artistes in the area whose side hustle is conducting. Don Carlo says these days, he doesn’t even have time to wax new singles and his fans are always saying “Don Carlo give us something plssssss” every time he’s passing by.`,
+                `Sisi Pepper, one of the beneficiaries of the #WomenInConducting program championed by Mr Tayo (aka Ogbeni Baruwa), spoke about it on social media. She used the hashtag #ConductingIsNotDeducting. Till today i don’t know what that means but all her fellow conductors used the same hashtag and got a lot of traction around it. She’s an inspiration to everyone.`, 
+                `One of the conductors; Adigun, popularly known as Diggs, even said that insulting passengers for absolutely no reason isn’t giving them as much joy anymore.`, 
+                `“Guy, it's paining me mehn. I graduated from conducting training five years ago. For five good years, fighting passengers has been sweet. These days, it’s no longer sweet😩. We’re at an all-time low. They have to do something about this for us.`, 
+                `“People think ‘Diggs’ is from ‘Adigun’. Hahahaha (he actually said “hahahaha”). They don’t know it’s really from my ability to take unnecessary digs at people. Oh you’re shocked abi? Don’t be shocked pls, it’s just my ability. Now e no even sweet anymore. Damn.”`, 
+                `We then spoke to the leader of the conductors in the area, Young Papa. And we asked him to just give us a round off of how the fuel subsidy has affected business and what he thinks is the best way to go now.`,
+                `“Fuel subsidy ke? Why would we complain about fuel subsidy removal? Better stop cracking jokes yunno. We’re talking about Conducting Subsidy that was removed yunno. Instead of doing small small shifts of 10 hours per day, conductors have been forced to do at least 11 hours per day for a complete session. This is so that we can collectively make more money and afford the trip for the summer holiday in France.`, 
+                `“But we don’t want mehn. It’s really taking a toll on us yunno. We prefer to stay here and suffer in our motherland yunno”`,
+                `Everybody in the interview crew, releases a collective “Mstchewwwwww.” We thought we were here to get the view on how fuel subsidy is affecting conductors. We didn’t know we were coming to talk to unserious people that Wakanow wants to sponsor.`,
+                `Pls express your annoyance with these people in the comments section below. Because I know that we’re not the only ones annoyed.`,
+                `Good newsss! Reader’s choice is open on the IG page! Pls check and grab your chance now🙏🏽👍🏾. Thank you!`,
+                `Finally, subscribe if you haven’t! Thank you!`
                 ]
 
             
