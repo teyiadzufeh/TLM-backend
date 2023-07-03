@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 require('dotenv').config();
-const pr = process.env.email_Password;
+const pr = process.env.EMAIL_PASSWORD;
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -39,4 +39,4 @@ setInterval(() => {
 
 // setInterval(reload, 1700000)
 
-app.listen(port, () => console.log(`Listening to port ${port}, ${pr}`));
+app.listen(port, () => console.log(`Listening to port ${port}`));

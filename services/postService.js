@@ -10,20 +10,21 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [   
-                `We’re live in the serious trenches of Banana Island, in Lagos Nigeria. There has been obvious dissatisfaction amongst the conductors due to the subsidy removal. They have all admitted that their training was rigorous, but it couldn’t have ever prepared them for this tough season. A bit like every person for the first year or so after uni. But I digress.`,
-                `“Make i no talk. Because if I talk. E no go even funny. Personally as I Dey so, I just feel say na wickedness. Okay okay yes we suppose get big holiday later but Ahn ahn. No be who survive till then go do holiday? 😭”`,
-                `That was the voice of Don Carlo, one of the upcoming artistes in the area whose side hustle is conducting. Don Carlo says these days, he doesn’t even have time to wax new singles and his fans are always saying “Don Carlo give us something plssssss” every time he’s passing by.`,
-                `Sisi Pepper, one of the beneficiaries of the #WomenInConducting program championed by Mr Tayo (aka Ogbeni Baruwa), spoke about it on social media. She used the hashtag #ConductingIsNotDeducting. Till today i don’t know what that means but all her fellow conductors used the same hashtag and got a lot of traction around it. She’s an inspiration to everyone.`, 
-                `One of the conductors; Adigun, popularly known as Diggs, even said that insulting passengers for absolutely no reason isn’t giving them as much joy anymore.`, 
-                `“Guy, it's paining me mehn. I graduated from conducting training five years ago. For five good years, fighting passengers has been sweet. These days, it’s no longer sweet😩. We’re at an all-time low. They have to do something about this for us.`, 
-                `“People think ‘Diggs’ is from ‘Adigun’. Hahahaha (he actually said “hahahaha”). They don’t know it’s really from my ability to take unnecessary digs at people. Oh you’re shocked abi? Don’t be shocked pls, it’s just my ability. Now e no even sweet anymore. Damn.”`, 
-                `We then spoke to the leader of the conductors in the area, Young Papa. And we asked him to just give us a round off of how the fuel subsidy has affected business and what he thinks is the best way to go now.`,
-                `“Fuel subsidy ke? Why would we complain about fuel subsidy removal? Better stop cracking jokes yunno. We’re talking about Conducting Subsidy that was removed yunno. Instead of doing small small shifts of 10 hours per day, conductors have been forced to do at least 11 hours per day for a complete session. This is so that we can collectively make more money and afford the trip for the summer holiday in France.`, 
-                `“But we don’t want mehn. It’s really taking a toll on us yunno. We prefer to stay here and suffer in our motherland yunno”`,
-                `Everybody in the interview crew, releases a collective “Mstchewwwwww.” We thought we were here to get the view on how fuel subsidy is affecting conductors. We didn’t know we were coming to talk to unserious people that Wakanow wants to sponsor.`,
-                `Pls express your annoyance with these people in the comments section below. Because I know that we’re not the only ones annoyed.`,
-                `Good newsss! Reader’s choice is open on the IG page! Pls check and grab your chance now🙏🏽👍🏾. Thank you!`,
-                `Finally, subscribe if you haven’t! Thank you!`
+                `There are many things about birthdays that are so intriguing. For instance, why do we naturally want to celebrate someone else’s birthday more than we celebrate ours? Or at least for me that’s how it is👍🏾.`,
+                `Or why is it only one birthday that we have?`,
+                `I’m playing o. Before someone that is reading this blog for the first time will think that these are the mumu things we normally say here😭.`,
+                `To serious business pls. This question is older than Nigeria’s independence but we still need an answer: what are we supposed to be doing when they’re singing “happy birthday to you” for us?`, 
+                `The closest answer I’ve seen for that is the Chef Dammy dance but we’ve not totally confirmed if that would work😭.`, 
+                `I think birthdays are cool because it's really special that we’re acknowledging your life, and your survival on this earth lol because things dey happen. It’s a chance to look back and be grateful to God for life and be hopeful that “if I survived to this point, I can definitely survive further”🙏🏽. You’re motivated by that quote innit?`, 
+                `Quick break: do you guys ever think of how twins can reply “Same to you” on their birthdays?`, 
+                `Birthdays can seem a bit depressing if you analyse them using the incredible standards that you have set for yourself or the entire world has set for you. You can check your age and scream internally (or maybe externally, depending on which part of Lagos you live in) and say “What am I doing with my lifeeee? I’ve not even achieved much😭” And the crazy thing is that you might be correct to some extent💀. `, 
+                `But let’s not do that on our birthdays pls. Yesterday has passed. Do a small celebration of the very little wins lol. Then tomorrow you can find how to start cooking something that will not make you scream on your next birthday. It’s not easy mehn. But your birthday is one day; 24 hours. Enjoy it pls. `,
+                `The “cooking” in the previous paragraph is figurative, except you’re a chef. Go Dammy Go Dammy Go!`, 
+                `Thank you for reading today’s post, and the previous 29! If you’re born in June, I wanna let you know that you’re a star because you could’ve been born in any month but you chose the best month??! Superstar doings pls 🫵🏽. `,
+                `Pls leave a comment, click the ‘Sponsored By’ link, you will realise that there’s a nice crossover there between me and my gggg🙈. `,
+                `Subscribe so that I will follow you on IG and wish you happy birthday pls. I’m starting birthday shoutouts from next month👀🙏🏽. Alright bye!`,
+                // `Good newsss! Reader’s choice is open on the IG page! Pls check and grab your chance now🙏🏽👍🏾. Thank you!`,
+                // `Finally, subscribe if you haven’t! Thank you!`
                 ]
 
             
