@@ -10,15 +10,17 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [   
-                `This post is dedicated to the first person that conceived the idea to make biscuits. It will be well with you. And the Five Naira Note, with whom during our hay day, we were able to acquire biscuits aplenty. `,
-                `This research project aims at highlighting the adverse effect that lack of quality and affordable biscuits has on the economy in Nigeria, with evidence beyond doubt that a nation like Nigeria will benefit from increased biscuit-consumption. You’re feeling the English construction right now abi? 👀`,
-                `Now to the table of contents: Chapter (aka Paragraph) one talks about biscuits, Chapter two talks about biscuits, Chapter three may talk about biscuits, Chapter four hmmm i think it will talk about biscuits, and finally chapter five will definitely be about biscuits. `,
-                `For some time now, i’ve been trying to eat more biscuits because it’s good for the body (pls don’t ask me how). Searching for these biscuits has opened my eyes to the lack of affordable quality biscuits in Nigeria at the moment. Emphasis on AFFORDABLE. That’s a big shame in my honest opinion and that is partly why our economy is not good right now 👀🙏🏽.`,
-                `It was (it wasn't) Ralph Emerson who said “Unless a country can produce proper affordable quality biscuits, they are at the mercy of economic innuendos” and he’s so real for that. In the olden days, we had the likes of Fishly, Parle-G, Digestive and all (My Memory, 2006-2015). You could buy these biscuits in large quantities for the amount you would use to buy half of an individual piece these days. They were so good and there were always enough pieces in each packet. `,
-                `In my recent findings, quality and quantity of biscuits have dropped significantly (Mallams/Sellers in my area, 2023). What a life. Why would people not be angry in this country when they can’t buy proper biscuits without spending half of their net worth? `,
-                `According to Not The World Economic Forum headed by me, NTWEF, you might say that it’s the economy that affected the biscuits first but the economy affecting the biscuits has hereby led to the biscuits affecting the citizens hereby affecting the economy (NWTEF Annual Report 2023). I might not be FK or Jolla but I said what I said.`,
-                `In conclusion, we must ask ourselves a very salient question: shall we continue to lose ourselves like this in this country and not fix the biscuit problem? Anything can spoil (apart from transformers pls) but we must never let affordable “biscuit eating” spoil. We just can’t. `,
-                `As a reader of today’s post, you deserve biscuits🙏🏽. As a subscriber, you deserve a carton of biscuits. If you haven’t subscribed pls use the button below and leave a comment on what you think about all this. Share as well with someone! Follow on IG @thewritingsthatteyipromised too! Have a great week 🙏🏽. `,
+                `“Hi Barbie!”.
+                “Hi Ken!”                 `,
+                `Imagine me, about two months after the Barbie hype was serious, coming to talk about something like 'Why I love the Barbie movie.' Wouldn’t you be confused?`,
+                `Well, that’s exactly how people look when they try to drag trends longer than they should. I don’t know the person that thought of the word 'trend,' but the person was onto something by adding 'end' at the... end of the word. Trends are supposed to end, please.`,
+                `Like, we’re in September, please let it go.`,
+                `Also, how about you don’t make that your entire brand? Like some people are still holding on to some 'trends' that have ended since like 2021. Please, I’m begging you, end it.`,
+                `I’m not judging you, but respectfully, 'Ahn ahn.' It’s not every trend you must join. Nothing will happen to the rotation of the earth on its axis if you don’t join a trend. Yes, I’m talking to you (and me too 😏). Free Barbie and Ken.`,
+                `You must understand that this is coming from a serious pioneer of the 'Let people enjoy things' movement. Anything except trends, please.`,
+                `Trends are like temporary solutions. And you know what they say about continuing to give temporary solutions...`,
+                `Now if you don’t understand the reference in the previous paragraph, that’s okay because that’s also from a trend, and most trends last days, not even months. Hence, you might not discover the trend before its lifespan expires 🙏🏽. That’s fine. Move on. You will join the next trend 👍🏾.`,
+                `You wanna know what’s not a trend so there’s no limit to how much you can do it? Sharing the Teyilovesmondays blog with people 🙏🏽. Thank you for reading, and I’ll love to hear what you think about it in the comments 🙏🏽. Have a nice week!"`,
                 // `Don’t forget to add “Have a great week” in order not to seem rude. `,
                 // `Check the link in the Subscribers Section to participate in and win a prize`,
                 // `Have a great week!🤭`,
