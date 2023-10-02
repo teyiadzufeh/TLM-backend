@@ -10,17 +10,16 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [   
-                `“Hi Barbie!”.
-                “Hi Ken!”                 `,
-                `Imagine me, about two months after the Barbie hype was serious, coming to talk about something like 'Why I love the Barbie movie.' Wouldn’t you be confused?`,
-                `Well, that’s exactly how people look when they try to drag trends longer than they should. I don’t know the person that thought of the word 'trend,' but the person was onto something by adding 'end' at the... end of the word. Trends are supposed to end, please.`,
-                `Like, we’re in September, please let it go.`,
-                `Also, how about you don’t make that your entire brand? Like some people are still holding on to some 'trends' that have ended since like 2021. Please, I’m begging you, end it.`,
-                `I’m not judging you, but respectfully, 'Ahn ahn.' It’s not every trend you must join. Nothing will happen to the rotation of the earth on its axis if you don’t join a trend. Yes, I’m talking to you (and me too 😏). Free Barbie and Ken.`,
-                `You must understand that this is coming from a serious pioneer of the 'Let people enjoy things' movement. Anything except trends, please.`,
-                `Trends are like temporary solutions. And you know what they say about continuing to give temporary solutions...`,
-                `Now if you don’t understand the reference in the previous paragraph, that’s okay because that’s also from a trend, and most trends last days, not even months. Hence, you might not discover the trend before its lifespan expires 🙏🏽. That’s fine. Move on. You will join the next trend 👍🏾.`,
-                `You wanna know what’s not a trend so there’s no limit to how much you can do it? Sharing the Teyilovesmondays blog with people 🙏🏽. Thank you for reading, and I’ll love to hear what you think about it in the comments 🙏🏽. Have a nice week!"`,
+                `Today is October 2nd and it’s the start of a new month, obviously. And I’m ready to take life very seriously, again. Like, again again`,
+                `There’s something in the oxygen of the world at the start of certain milestone dates that just makes one want to put their life in order lol. The one at the beginning of each year is a bit more prominent and more widely spoken about because I mean, you only get about 90 new years in life (if you’re lucky).`,
+                `However, I don’t know whether it’s just me but once it’s a new month as well, I immediately feel the urge to change my life for the better. It’s like the 2 in the O2 (Oxygen) we inhale at the beginning of every month signifies “2ND CHANCE.” Corny but you get it innit.`,
+                `If I’m being absolutely brutally totally honest, the 2nd chance feeling dies out very fast. Hence I have devised a very brilliant way to preserve this feeling. Do you wanna hear it?`,
+                `Whether you answered “yes” or “no” to that question is a bit irrelevant right now because I’m gonna tell you. The best way to preserve this feeling is to store some of the oxygen from the beginning of the month and inhale once I need that motivation at any point.`,
+                `It’s too obvious that I have watched too many movies in my life because I genuinely don’t know where that came from😭. On a serious note I think the best way is to whine (to deceive positively) myself everyday that it’s the beginning of the month even if it’s October 24th 😭 and hope it works.`,
+                `If you have a better solution or you can relate even a little bit pls leave your thoughts in the comments section below. Unrelated but these endings always feel like I’m a youtuber and this is my YouTube channel. Have a great month ahead!`,
+                // `Trends are like temporary solutions. And you know what they say about continuing to give temporary solutions...`,
+                // `Now if you don’t understand the reference in the previous paragraph, that’s okay because that’s also from a trend, and most trends last days, not even months. Hence, you might not discover the trend before its lifespan expires 🙏🏽. That’s fine. Move on. You will join the next trend 👍🏾.`,
+                // `You wanna know what’s not a trend so there’s no limit to how much you can do it? Sharing the Teyilovesmondays blog with people 🙏🏽. Thank you for reading, and I’ll love to hear what you think about it in the comments 🙏🏽. Have a nice week!"`,
                 // `Don’t forget to add “Have a great week” in order not to seem rude. `,
                 // `Check the link in the Subscribers Section to participate in and win a prize`,
                 // `Have a great week!🤭`,
