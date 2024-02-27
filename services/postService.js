@@ -10,38 +10,17 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [ 
-                `Me? I will miss a chance to write a valentine’s blogpost ke? Never o. Impossible.`,
-                `Happy new year and Merry Christmas to you guys please. I've missed you guys please.`,  
-                `Okay now that we've gotten the pleasantries out the way. Can we talk about the blue whale in the room; Valentine's day? Idk but it seems like this year, there's more hype about valentine's day than normal.`,
-                `I'm not complaining or anything though. It's just interesting to see. But I have a few thoughts (It's always people that are not playing the match that will have opinions about the match - this sentence is not about football).`,
-                `The summary of my thoughts goes thus: this is the worst era to be doing valentine's things in😂, at least since I was born. Please hear me out before you block and drag me like South Africa (yes I know we lost the final but you can only lose a final if you qualify🫢). We've become so materialistic. In every single thing.`,
-                `Now this is not because there's only $0.34 sitting pretty in one of my access bank accounts. It's just the truth about things these days. And if you don't think you're materialistic, then I'm proud of you. However, everything around you points to materialism. The chances that you're subtly materialistic are very high.`,
-                `Please don't be bamboozled by the construction of the words that I'm assembling. It is intentionally curated for a certain purpose that I shall release some day.`,
-                `If you're not materialistic, they'll call you "understanding" (Iykyk). It's almost a slur to not be materialistic . Half of the jokes on WhatsApp statuses (the best memes provider ever) are about money mixed with what is supposed to be love.`,
-                `Secondly, there's hardly anybody purely in love these days. The entire idea has been cultivated by social media and minute things here and there to make love seem like it's harder than it should be. Love used to be about poetry and you know, nice gestures. These days they'll say your words are nice and all but where's the evidence (another Iykyk). There are only three and a half Words of Affirmation people left in the world.`,
-                `The thing has become a competition. And like I said earlier, you might not want to be materialistic o, but the fact that we're on social media every single day, you're seeing everything they're doing for everybody else. You will now be asking yourself small small "abi don't I deserve something like this?" Meanwhile your significant (abi insignificant) other is trying to gather their hustle but you're asking yourself whether you don't deserve something new. Please note that this is not gender-specific. This thing has affected the minds of both genders.`,
-                `This is not me saying that the philosopher that said "love is sweet o, when money enter love is sweeter" is wrong, this is just to say that the first part of that quote is becoming eroded. We are almost left with "when money enter, love is sweet".`,
-                `Then there's the extra thing of second guessing everything your partner is doing these days because nobody can guarantee the trust of anybody. There's not enough access to the heart of the person that most people are in union with. You get it?🫢`,
-                `I have a lot to say about this thing and if you leave me here we won't finish before Valentine's Day.`,
-                `Imagine we all reorient our minds (it won't happen but imagine sha). Imagine we just love for love and not do all the extra mental gymnastics. Well, imagination has threatened to align her fists in a way that would cause bruises to me (wan wound me).`,
-                `After all these paragraphs I've written, please I'm here to solicit for a val abeg. If you know anybody that wants to VALue me please let me know. You get it?🫢 Nah I think this is one of my worst jokes ever.`,
-                `TLM is back baby!`,
-                // `1. People that saw all the red flags but still chose to be with the person`,
-                // `2. People that decided to study five-year courses in uni.`,
-                // `The last but not the least is the Most Special Person in the world award. And the nominees are:`,
-                // `1. People that read the Teyilovesmondays blog`,
-                // `2. People that tell other people about the Teyilovesmondays blog`,
-                // `3. People that talk subscribe to the Teyilovesmondays blog`, 
-                // `How many awards did you win?! And which award is your favorite?! Let me know in the comments below! Have a great week ahead.`, 
-                // `By the way, this is my Grammy-collection speech. I just did copy and paste.`, 
-                // `One year of Teyi Loving Mondays! And I hope you’ve been able to love Mondays a little more because of this blog. There’s definitely more to come! `,
-                // `This week I don’t even need you to share this with your friends and… I’m sorry I couldn’t say that with a straight face. Pls share it abeg I didn’t write Grammy-collection speech for nothing. Have a great week!`,
-                // `Today’s post is not so long so that I can give you guys time to plan your wedding that has resulted from this series.`,
-                // `Go back to episode 1, do the introduction, proceed to episode 2, do the preparation, take the love language test in episode 3, ask the questions in 4 and 5, and return with your testimonies, hallelujah 🙈🙏🏽.`,
-                // `I hope you’ve enjoyed it (this is me being modest o. It’s not like you have a choice o. You must’ve enjoyed it by fire by force🙈). LIKE, SHARE, SUBSCRIBE, FOLLOW FOR FOLLOW, WEDDING FOR WEDDING. Have a great week!`,
-                // `Subscribe so that I will follow you on IG and wish you happy birthday pls. I’m starting birthday shoutouts from this month👀🙏🏽. Alright bye!`,
-                // `Good newsss! Reader’s choice is open on the IG page! Pls check and grab your chance now🙏🏽👍🏾. Thank you!`,
-                // `Finally, subscribe if you haven’t! Thank you!`
+                `In primary school, we (or at least I) learnt about months and the number of days each one has. It was via a very catchy song, one that I admittedly still use sometimes to crosscheck how many days are left till salary day/week. Fortunately for me, there happens to be a month in which I do not need that song because I mean, it’s an incomplete month; the only one of its kind. February. `,
+                `However, the more I deeped (slang for ‘reasoned deeply about’) it, the more I realised that they gave us information that the month is incomplete. Granted. But who incompleted it? Or what incompleted it? I’m not complaining though, just here to give my unrivalled answer to that question. Let’s get it.`,  
+                `I’m sure ‘29th’ must have read this title and said “Wow. I’m finally free. People actually don’t consider me obscure.” Bro relax. We didn’t even remember you until this year. And quite frankly, you’re elongating the salary day/week for March. Mstcheww. It’s alright though. We will LEAP over that little hurdle and continue with the real discussion of today.`,
+                `During the special length-choosing festival held by all the months, there was a talent show organised to determine how the days of the year would be shared amongst the months. The prizes were as follows: `,
+                `---The best four months will get 30 days each, because “30” looks more aesthetically pleasing than “31”. I mean, aesthetics>>>>>.`,
+                `---The remaining eight will get 31, to show that they were not as cool as the best four.`,
+                `Of course, June and three other months won the talent show. June was the overall best in fact, but as a humble guy, was fine with having three other months on 30 days as well. However, February finished fifth, then proceeded to argue and fight. He even went as far as shouting “Am I Man U? Why will you put me in fifth position?!” Very rude but I kinda see his point.`,
+                `29th, 30th and 31st decided to join forces to fight for their right. In reality, all evidence pointed to the fact that February was even supposed to be in sixth position and were lucky to be fifth. So this was somewhat silly from February. Well, 29th, a sly guy, struck a deal with the judges when he realised that they were gonna lose the case. Hence he was given a chance to appear once in four years on calendars.`,
+                `For the other two guys, it was over before it even started. They were removed completely and February was made to suffer the consequences. Leaving it at 28.25 days a year. It wasn’t over though. Trust January to overdo. January took 30th and 31st February and added them to herself because nobody would take them anymore. They’re still there on the calendar but January is hiding them.`,
+                `Thank you for reading this post today. Yeah the post is short like February lol. If you’re new here, hit the subscribe button, turn on the notification bell so that you can be notified every time a new post drops. Leave a comment as it helps the algorithm to… I think we’re entering another place here. But you get the drift. `,
+                `Have a nice week guys.`,
                 ]
 
             
@@ -148,21 +127,6 @@ class PostService {
     getLatestPosts() {
         return new Promise(async(resolve, reject)=>{
             const latestPosts = await Post.find().sort({postnum: -1}).limit(5);
-            // let latestPosts = await redisClient.lrange('latestPosts', 0, 5);
-            // // console.log(latestPosts)
-            // // let finalLatest = []
-            // if (latestPosts != []) latestPosts && console.log("fetching post from redis...", typeof(latestPosts));
-
-            // if (latestPosts = []){
-            //     latestPosts = [await redisClient.get('post2'), await redisClient.get('post3')];
-            //     for (let index = 0; index < latestPosts.length; index++) {
-            //         // finalLatest.push(JSON.stringify(latestPosts[index]));
-            //         await redisClient.rpush(`latestPosts`,latestPosts[index]);
-            //     }
-            //     await redisClient.expire('latestPosts',300)
-            //     // redisClient.rpush(`latestPosts`,redisClient.get('post2'),redisClient.get('post3'));
-            //     // redisClient.expire('latestPosts',300)
-            // }
             resolve({latestPosts});
         })
     }
@@ -170,7 +134,7 @@ class PostService {
     //GET FEATURED POSTS
     getFeaturedPosts() {
         return new Promise (async (resolve, reject) => {
-            const featuredPosts = await Post.find({featured: true}).limit(3);
+            const featuredPosts = await Post.find({featured: true}).limit(3).sort({_id: -1});
             resolve({featuredPosts});
         })
     }
