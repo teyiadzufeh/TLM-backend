@@ -10,17 +10,16 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [ 
-                `In primary school, we (or at least I) learnt about months and the number of days each one has. It was via a very catchy song, one that I admittedly still use sometimes to crosscheck how many days are left till salary day/week. Fortunately for me, there happens to be a month in which I do not need that song because I mean, it’s an incomplete month; the only one of its kind. February. `,
-                `However, the more I deeped (slang for ‘reasoned deeply about’) it, the more I realised that they gave us information that the month is incomplete. Granted. But who incompleted it? Or what incompleted it? I’m not complaining though, just here to give my unrivalled answer to that question. Let’s get it.`,  
-                `I’m sure ‘29th’ must have read this title and said “Wow. I’m finally free. People actually don’t consider me obscure.” Bro relax. We didn’t even remember you until this year. And quite frankly, you’re elongating the salary day/week for March. Mstcheww. It’s alright though. We will LEAP over that little hurdle and continue with the real discussion of today.`,
-                `During the special length-choosing festival held by all the months, there was a talent show organised to determine how the days of the year would be shared amongst the months. The prizes were as follows: `,
-                `---The best four months will get 30 days each, because “30” looks more aesthetically pleasing than “31”. I mean, aesthetics>>>>>.`,
-                `---The remaining eight will get 31, to show that they were not as cool as the best four.`,
-                `Of course, June and three other months won the talent show. June was the overall best in fact, but as a humble guy, was fine with having three other months on 30 days as well. However, February finished fifth, then proceeded to argue and fight. He even went as far as shouting “Am I Man U? Why will you put me in fifth position?!” Very rude but I kinda see his point.`,
-                `29th, 30th and 31st decided to join forces to fight for their right. In reality, all evidence pointed to the fact that February was even supposed to be in sixth position and were lucky to be fifth. So this was somewhat silly from February. Well, 29th, a sly guy, struck a deal with the judges when he realised that they were gonna lose the case. Hence he was given a chance to appear once in four years on calendars.`,
-                `For the other two guys, it was over before it even started. They were removed completely and February was made to suffer the consequences. Leaving it at 28.25 days a year. It wasn’t over though. Trust January to overdo. January took 30th and 31st February and added them to herself because nobody would take them anymore. They’re still there on the calendar but January is hiding them.`,
-                `Thank you for reading this post today. Yeah the post is short like February lol. If you’re new here, hit the subscribe button, turn on the notification bell so that you can be notified every time a new post drops. Leave a comment as it helps the algorithm to… I think we’re entering another place here. But you get the drift. `,
-                `Have a nice week guys.`,
+                `This life na chess not checkers. Walk with me.`,
+                `I’ve been doing a lot of deep thinking recently.`,  
+                `It’s a lie o. Who is thinking deeply in this heat? or in this cold? (for my foreign readers. You can see that the weather is bad everywhere) But yeah this life is more of chess than checkers. I said walk with me please🙏🏾.`,
+                `In chess, you always have to think two or three or even four moves ahead, it doesn’t mean that you won’t think in checkers but just know there are levels to thinking. You have to plan ahead for future instances that are within and without (accept my English) your control.`,
+                `You can be looking at something now and you realise that the real koko of this present matter is based on two or three matters from now. In fact, if you check three paragraphs from now, you’ll realise that this paragraph and that paragraph have some form of interconnectability amongst themselves. If you have been walking with me since, you can upgrade now and ride with me. You deserve.👍🏾`,
+                `One must be careful to guard their rooks properly, because if you’re not careful in the night, you can lose your knight, as it will become a pawn in the equation of life. As I write this, you cannot imagine the amount of swelling that my head is going through at the moment. This is DIVINE INSPIRATION.`,
+                `There will then be only one solution to that problem; a prayer from your bishop, because the hearts of kings and dare I say queens, are in the Hands of God.`,
+                `Basically what I was trying to say three paragraphs ago is that you must plan. If you fail to plan, you plan to fail. Meaning that while it’s sweet to wing things in life a lot of times, one must be careful to plan sensibly to ensure we do not find ourselves inside unnecessary rubbish.`,
+                `If you haven’t noticed by now, I have just recently started playing chess. It’s too sweet mehn. I get why people are heavily invested in it.💀`,
+                `Pls I’m down for a chess game with anybody if you’re interested. I’m just learning pls, don’t cook me too much. Now, for my next post I will be `,
                 ]
 
             
@@ -52,6 +51,10 @@ class PostService {
                     postnum,
                     featured,
                     sponsored
+                })
+
+                await Category.findByIdAndUpdate(gory._id, {
+                    "$push": {"posts": newPost._id}
                 })
 
                 resolve({newPost})
