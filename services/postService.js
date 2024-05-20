@@ -10,14 +10,17 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [ 
-                `Not probably, you definitely need one. “But are you advising us to go for a vacation in March???” Yes. Quite frankly, I am.`,
-                `The first three months of the year are usually the busiest. Every office/business, serious or unserious, big or small, likes to go extra hard at the beginning of the year, particularly because they feel like the December break was “long” (it wasn’t). And naturally, individuals also like to go extra hard at the beginning of the year because I mean, that’s when ginger is highest.`,  
-                `If you go very hard for the first two to three months of the year, chances are, you’ll get tired early. That’s fine mehn. It’s only normal. That’s why several new year’s resolutions only last a short while loool. Your body, like a bicycle, becomes too tired. Your mind will then give in. What could’ve been resolved with a short break/vacation will now spiral into several months of nothing.`,
-                `Then when December comes again, you’ll be cutting people off because “they didn’t help you achieve your goals” meanwhile you just needed to take a quick vacation to reboot😂. `,
-                `You don’t have to travel far for this vacation, because most workplaces don’t really care about your mental health tbh, so if you come with the “I need a break” thing, they can swear for you😭. Hence, you must become a self-induced vacationist. Be a bad guy (please note that I will not be held responsible if they carry you. Apply wisdom🙏🏾).`,
-                `When I say be a bad guy, I mean, manage your workload by yourself. It’s not every workcall that you’ll do with all your strength during this self-induced vacation. Reschedule as much as possible. Na you get your vacation, make nobody use “let’s hop on a quick call” to finish you.`,
-                `Read Teyilovesmondays episodes for that whole self-induced vacation week. Watch movies (that make sense, because there are movies you might watch that will make you vex) during this break. Watch football (avoid Chelsea matches for now😔). Go out, do something interesting. Go for a checkup, in the hospital and with Whot cards. `,
-                `Did I mention that you should read Teyilovesmondays posts for that whole week? Or for the few days. With this few points of mine, I hope I’ve been able to confuse you and not convince you that a teacher is better than a lawyer.`
+                `If you ever need evidence that something strange is happening to time this year, you can use this blog (or website) as a case study. My last post was literally yesterday. Why is my calendar saying it was March?!`,
+                `Oya oya you don catch me😞🙏🏽.`,  
+                `I would’ve said I was “rebranding” or something like that, but the honest truth is that I've just not been able to calm down and write anything. There’s been a continuous Error 404 in my head concerning these new posts.`,
+                `Like, you know when you have an assignment to do, and you keep postponing (a professional variation of the word “procrastinating”). Then you get to a point where you have to do it, because you don’t want to lose the marks or serve a punishment.`,
+                `The problem with my own case is that there are no marks at stake😭. So I could’ve done this laziness till 2055 and nobody would’ve removed any marks from me. But is that really correct though?! Are there not things that signify “marks” when we procrastinate, even in adulthood though?`,
+                `This is the part of this post where you say “hmmmmmmm word word, you inspire me Teyi.”`,
+                `To avoid this laziness/discombobulation/disorientation leading to Error 404 messages, I will actually have to rebrand. `,
+                `I do not intend to leave this post up on this site for more than three weeks. This is for accountability mostly. Pls you have the right to remove my marks or give me a punishment if I don't deliver on this promise of rebranding.`,
+                `If you’re not sure about what punishment you want to give, you can send money to me. I will be so annoyed that somebody will send me money at this stage of my life😞. Like imagine the insult???? `,
+                `It will motivate me to do better than this. Honestly. In fact that’s what my doctor said.`,
+                `Thank you for banking with me, please send any complaint you have, to HR, also known as the comments section below, and my DMs. Have a great week ahead!`
                 ]
 
             
