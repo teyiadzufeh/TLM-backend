@@ -10,16 +10,14 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [ 
-                `This life na chess not checkers. Walk with me.`,
-                `I’ve been doing a lot of deep thinking recently.`,  
-                `It’s a lie o. Who is thinking deeply in this heat? or in this cold? (for my foreign readers. You can see that the weather is bad everywhere) But yeah this life is more of chess than checkers. I said walk with me please🙏🏾.`,
-                `In chess, you always have to think two or three or even four moves ahead, it doesn’t mean that you won’t think in checkers but just know there are levels to thinking. You have to plan ahead for future instances that are within and without (accept my English) your control.`,
-                `You can be looking at something now and you realise that the real koko of this present matter is based on two or three matters from now. In fact, if you check three paragraphs from now, you’ll realise that this paragraph and that paragraph have some form of interconnectability amongst themselves. If you have been walking with me since, you can upgrade now and ride with me. You deserve.👍🏾`,
-                `One must be careful to guard their rooks properly, because if you’re not careful in the night, you can lose your knight, as it will become a pawn in the equation of life. As I write this, you cannot imagine the amount of swelling that my head is going through at the moment. This is DIVINE INSPIRATION.`,
-                `There will then be only one solution to that problem; a prayer from your bishop, because the hearts of kings and dare I say queens, are in the Hands of God.`,
-                `Basically what I was trying to say three paragraphs ago is that you must plan. If you fail to plan, you plan to fail. Meaning that while it’s sweet to wing things in life a lot of times, one must be careful to plan sensibly to ensure we do not find ourselves inside unnecessary rubbish.`,
-                `If you haven’t noticed by now, I have just recently started playing chess. It’s too sweet mehn. I get why people are heavily invested in it.💀`,
-                `Pls I’m down for a chess game with anybody if you’re interested. I’m just learning pls, don’t cook me too much. Now, for my next post I will be `,
+                `Not probably, you definitely need one. “But are you advising us to go for a vacation in March???” Yes. Quite frankly, I am.`,
+                `The first three months of the year are usually the busiest. Every office/business, serious or unserious, big or small, likes to go extra hard at the beginning of the year, particularly because they feel like the December break was “long” (it wasn’t). And naturally, individuals also like to go extra hard at the beginning of the year because I mean, that’s when ginger is highest.`,  
+                `If you go very hard for the first two to three months of the year, chances are, you’ll get tired early. That’s fine mehn. It’s only normal. That’s why several new year’s resolutions only last a short while loool. Your body, like a bicycle, becomes too tired. Your mind will then give in. What could’ve been resolved with a short break/vacation will now spiral into several months of nothing.`,
+                `Then when December comes again, you’ll be cutting people off because “they didn’t help you achieve your goals” meanwhile you just needed to take a quick vacation to reboot😂. `,
+                `You don’t have to travel far for this vacation, because most workplaces don’t really care about your mental health tbh, so if you come with the “I need a break” thing, they can swear for you😭. Hence, you must become a self-induced vacationist. Be a bad guy (please note that I will not be held responsible if they carry you. Apply wisdom🙏🏾).`,
+                `When I say be a bad guy, I mean, manage your workload by yourself. It’s not every workcall that you’ll do with all your strength during this self-induced vacation. Reschedule as much as possible. Na you get your vacation, make nobody use “let’s hop on a quick call” to finish you.`,
+                `Read Teyilovesmondays episodes for that whole self-induced vacation week. Watch movies (that make sense, because there are movies you might watch that will make you vex) during this break. Watch football (avoid Chelsea matches for now😔). Go out, do something interesting. Go for a checkup, in the hospital and with Whot cards. `,
+                `Did I mention that you should read Teyilovesmondays posts for that whole week? Or for the few days. With this few points of mine, I hope I’ve been able to confuse you and not convince you that a teacher is better than a lawyer.`
                 ]
 
             
