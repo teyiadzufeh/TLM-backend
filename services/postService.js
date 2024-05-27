@@ -10,17 +10,16 @@ class PostService {
             let gory = await Category.findOne({name: category});
 
             const blocks = [ 
-                `If you ever need evidence that something strange is happening to time this year, you can use this blog (or website) as a case study. My last post was literally yesterday. Why is my calendar saying it was March?!`,
-                `Oya oya you don catch me😞🙏🏽.`,  
-                `I would’ve said I was “rebranding” or something like that, but the honest truth is that I've just not been able to calm down and write anything. There’s been a continuous Error 404 in my head concerning these new posts.`,
-                `Like, you know when you have an assignment to do, and you keep postponing (a professional variation of the word “procrastinating”). Then you get to a point where you have to do it, because you don’t want to lose the marks or serve a punishment.`,
-                `The problem with my own case is that there are no marks at stake😭. So I could’ve done this laziness till 2055 and nobody would’ve removed any marks from me. But is that really correct though?! Are there not things that signify “marks” when we procrastinate, even in adulthood though?`,
-                `This is the part of this post where you say “hmmmmmmm word word, you inspire me Teyi.”`,
-                `To avoid this laziness/discombobulation/disorientation leading to Error 404 messages, I will actually have to rebrand. `,
-                `I do not intend to leave this post up on this site for more than three weeks. This is for accountability mostly. Pls you have the right to remove my marks or give me a punishment if I don't deliver on this promise of rebranding.`,
-                `If you’re not sure about what punishment you want to give, you can send money to me. I will be so annoyed that somebody will send me money at this stage of my life😞. Like imagine the insult???? `,
-                `It will motivate me to do better than this. Honestly. In fact that’s what my doctor said.`,
-                `Thank you for banking with me, please send any complaint you have, to HR, also known as the comments section below, and my DMs. Have a great week ahead!`
+                `The fact that today (May 27th) is not a public holiday for us all is enough proof that the government doesn’t value children. `,
+                `Are we not all children?! Did any of us fall from the sky?! Were we not all born?! What do you call someone who was born? The answer: a child! `,  
+                `Oh sorry that I just went straight into that, I had to get it off my chest. We need to revolutionise this classification of children.`,
+                `I can’t believe we have to be doing “Can you see my slides?” instead of “Can you see the way I went down the slide?” Or “Let’s hop on a call” instead of “Let’s go to the bouncing castle.” `,
+                `These are the issues.`,
+                `In mathematics, there’s something called deduction (this is an educational blog any day I feel like please).`,
+                `The people in government are fighting for and holding on to power every year and they call children; leaders of tomorrow. If children are leaders of tomorrow, and we’re not eligible to be leaders yet, can’t we then deduce that we’re still children?!`,
+                `We would’ve and should’ve all been preparing to go to the most random children’s day party where they’ll force people to come out and dance, then proceed to ask “IS SHE THE WINNER??” Only for them to shout “NOOOOO”😭😭😭. “Everybody tell her ‘BYE BYEEE’”`,
+                `I plan to organise a children’s day celebration for workers. Soon. It will consist of activities including but not limited to; piggybacking (the real version), circling back (the real version) and I promise there’ll be no form of “Tell me about yourself” here. No networking. It will be “DANCE, DANCE, DANCE.”`,
+                `In the meantime, I have to get back to work, when all I really wanna do is write one million episodes of this blog. It’s not me, it’s work. Please express your feelings in the comments so that I can invite you to the Children’s Day Celebration for Workers. Or do you not identify as a child?`
                 ]
 
             
